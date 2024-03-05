@@ -10,7 +10,7 @@ export const Button: FC<ButtonProps> = ({ children, onClick, type }) => {
   if (type === "outline") {
     return (
       <button
-        className="border border-accent_border text-light_accent_font py-5 px-10 rounded-xl text-xl"
+        className="border border-accent_border text-light_accent_font w-full p-4 md:py-5 md:px-10 rounded-xl text-xl"
         onClick={onClick}
       >
         {children}
@@ -19,7 +19,7 @@ export const Button: FC<ButtonProps> = ({ children, onClick, type }) => {
   }
   return (
     <button
-      className="bg-accent_background text-white py-5 px-10 rounded-xl text-xl"
+      className="bg-accent_background text-white w-full p-4 md:py-5 md:px-10 rounded-xl text-xl"
       onClick={onClick}
     >
       {children}
