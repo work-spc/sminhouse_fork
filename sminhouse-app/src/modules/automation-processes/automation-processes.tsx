@@ -5,21 +5,8 @@ import button from "../../icons/automation-processes/round-button.svg";
 import "./style.css";
 
 export const AutomationProcesses: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <div>
+    <div className="mb-40">
       <div className="md:text-center mb-6 md:mb-9 md:text-5xl text-3xl">
         <h2 className="font-bold mb-4 md:mb-6">Автоматизация процессов</h2>
         <p className="text-xl text-light_dark_font md:w-2/3 md:m-auto">
