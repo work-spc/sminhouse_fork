@@ -14,7 +14,7 @@ export default {
         accent_font: "#00A3C4",
         light_accent_font: "#0BC5EA",
         accent_border: "#0BC5EA",
-        gray_border: "#E7E9EC",
+        gray_border: "RGBA(19, 103, 150, 0.4)",
         dark_background: "#42526B",
         gray_background: "#EDF2F7",
         main_background: "#F9FBFC",

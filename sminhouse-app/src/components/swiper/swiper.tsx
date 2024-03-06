@@ -21,15 +21,16 @@ export function SwiperMain() {
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="w-full md:w-3/5"
+        className="w-full md:w-2/5 z-10"
       >
-        <SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center">
           <img src={first} alt="" />
         </SwiperSlide>
-        <SwiperSlide>
+
+        <SwiperSlide className="flex items-center justify-center">
           <img src={second} alt="" />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="flex items-center justify-center">
           <img src={third} alt="" />
         </SwiperSlide>
       </Swiper>

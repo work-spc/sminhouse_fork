@@ -1,0 +1,15 @@
+.circle-text {
+  position: relative;
+}
+
+.circle-text::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #0bc5ea; /* Голубой цвет */
+  border-radius: 50%; /* Делаем круг */
+  position: absolute;
+  left: 0px; /* Расположение слева от текста */
+  top: 50%; /* Выравнивание по вертикали по центру */
+  transform: translateY(-50%); /* Коррекция вертикального положения */
+}
