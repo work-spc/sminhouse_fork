@@ -6,7 +6,7 @@ import "./style.css";
 
 export const AutomationProcesses: React.FC = () => {
   return (
-    <div className="mb-40">
+    <div className="mb-20 md:mb-40">
       <div className="md:text-center mb-6 md:mb-9 md:text-5xl text-3xl">
         <h2 className="font-bold mb-4 md:mb-6">Автоматизация процессов</h2>
         <p className="text-xl text-light_dark_font md:w-2/3 md:m-auto">
@@ -45,14 +45,15 @@ export const AutomationProcesses: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-2xl p-6 w-full background-container flex flex-col justify-end">
+        <div className="rounded-2xl pt-48 md:p-6 w-full background-container flex flex-col justify-end">
           <div className="p-5 rounded-2xl bg-gray-200 bg-opacity-10 border border-white border-opacity-20 backdrop-blur-md">
             <div className="flex text-white gap-x-4">
-              <img src={logo} alt="" />
+              <img className="w-11 md:w-14" src={logo} alt="" />
               <div className="">
                 <p>SminHouse Demo</p>
                 <p className="font-normal text-sm">
-                  Ознакомьтесь со всеми функциями системы уже сейчас
+                  Ознакомьтесь со всеми функциями системы
+                  <span className="hidden md:block">уже сейчас</span>
                 </p>
               </div>
               <button className="w-1/6">
