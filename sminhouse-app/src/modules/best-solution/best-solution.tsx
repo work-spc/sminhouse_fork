@@ -1,6 +1,7 @@
 import "./style.css";
-import background from "../../icons/best-solution/background.png";
+
 import InputBestSolution from "../../components/best-solution-input/best-solution-input";
+import { Button } from "../../components/button/button";
 
 export const BestSolution: React.FC = () => {
   return (
@@ -20,9 +21,23 @@ export const BestSolution: React.FC = () => {
             placeholder="E-mail*"
           ></InputBestSolution>
           <InputBestSolution
-            type="numder"
-            placeholder="+7 (___) ___-__-__"
+            type="tel"
+            placeholder="(___) ___-__-__"
           ></InputBestSolution>
+          <button
+            className="bg-accent_background text-white  p-4 md:py-5 md:px-9 rounded-xl text-xl"
+            // onClick={onClick}
+          >
+            <div
+              style={{
+                caretColor: "white",
+                fontSize: "20px",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Подобрать решение
+            </div>
+          </button>
         </div>
       </div>
     </div>
