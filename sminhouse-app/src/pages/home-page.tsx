@@ -8,6 +8,7 @@ import { ReadyMadeSolutions } from "../modules/ready-made-solutions/ready-made-s
 import { BestSolution } from "../modules/best-solution/best-solution";
 import { SystemModules } from "../modules/system-modules/system-modules";
 import { SecuritySystems } from "../modules/security-systems/security-systems";
+import { OurPartners } from "../modules/our-partners/our-partners";
 
 export const HomePage: React.FC = () => {
   return (
@@ -20,7 +21,8 @@ export const HomePage: React.FC = () => {
         <ReadyMadeSolutions></ReadyMadeSolutions>
         <BestSolution></BestSolution>
         <SystemModules></SystemModules>
-        <SecuritySystems></SecuritySystems>
+        {/* <SecuritySystems></SecuritySystems> */}
+        <OurPartners></OurPartners>
       </div>
     </div>
   );

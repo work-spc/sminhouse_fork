@@ -1,0 +1,8 @@
+.background-best-solutions {
+  background-image: linear-gradient(to right, #39475c, #576e90);
+}
+.background-img-best-solutions {
+  background-image: url("../../icons/best-solution/background.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
