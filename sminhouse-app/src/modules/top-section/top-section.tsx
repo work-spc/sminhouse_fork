@@ -27,10 +27,10 @@ export const TopSection: React.FC = () => {
           Управляйте недвижимостью удобно и эффективно вместе со Sminhouse
         </h2>
         <div className="flex gap-x-6 mb-11 flex-wrap md:flex-nowrap">
-          <div className="mb-3 md:m-0 w-full">
+          <div className="mb-3 md:m-0 ">
             <Button children="Скачать презентацию"></Button>
           </div>
-          <div className="mb-3 md:m-0 w-full">
+          <div className="mb-3 md:m-0 ">
             <Button children="Получить демо-версию" type="outline"></Button>
           </div>
         </div>

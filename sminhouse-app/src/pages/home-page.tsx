@@ -6,6 +6,8 @@ import { AutomationProcesses } from "../modules/automation-processes/automation-
 import { OurProcess } from "../modules/our-process/our-process";
 import { ReadyMadeSolutions } from "../modules/ready-made-solutions/ready-made-solutions";
 import { BestSolution } from "../modules/best-solution/best-solution";
+import { SystemModules } from "../modules/system-modules/system-modules";
+import { SecuritySystems } from "../modules/security-systems/security-systems";
 
 export const HomePage: React.FC = () => {
   return (
@@ -17,6 +19,8 @@ export const HomePage: React.FC = () => {
         <OurProcess></OurProcess>
         <ReadyMadeSolutions></ReadyMadeSolutions>
         <BestSolution></BestSolution>
+        <SystemModules></SystemModules>
+        <SecuritySystems></SecuritySystems>
       </div>
     </div>
   );
