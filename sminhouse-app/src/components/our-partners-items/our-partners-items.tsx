@@ -4,22 +4,36 @@ import React, { FC, MouseEventHandler } from "react";
 
 interface OurPartnersItemsProps {
   children?: string;
-  type?: "outline";
+  position?: string;
 }
 
 export const OurPartnersItems: FC<OurPartnersItemsProps> = ({
   children,
-  type,
+  position,
 }) => {
-  if (type === "outline") {
+  if (position === "upper") {
     return (
-      <div className="bg-opacity-0 flex border border-white  min-h-28 md:min-h-36 w-full md:w-full rounded-xl text-xl">
+      <div className="background-partners-upper bg-white flex min-h-28 md:min-h-36 w-full md:w-full rounded-xl text-xl">
+        <img className="m-auto" src={children} alt="" />
+      </div>
+    );
+  }
+  if (position === "left") {
+    return (
+      <div className="background-partners-left bg-white flex min-h-28 md:min-h-36 w-full md:w-full rounded-xl text-xl">
+        <img className="m-auto" src={children} alt="" />
+      </div>
+    );
+  }
+  if (position === "right") {
+    return (
+      <div className="background-partners-right bg-white flex min-h-28 md:min-h-36 w-full md:w-full rounded-xl text-xl">
         <img className="m-auto" src={children} alt="" />
       </div>
     );
   }
   return (
-    <div className="bg-white flex min-h-28 md:min-h-36 w-full md:w-full rounded-xl text-xl">
+    <div className="bg-opacity-0 flex border border-white  min-h-28 md:min-h-36 w-full md:w-full rounded-xl text-xl">
       <img className="m-auto" src={children} alt="" />
     </div>
   );

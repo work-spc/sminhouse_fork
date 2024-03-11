@@ -19,7 +19,7 @@ export const Button: FC<ButtonProps> = ({ children, onClick, type }) => {
   }
   return (
     <button
-      className="bg-accent_background text-white w-full md:w-auto p-4 md:py-5 md:px-10 rounded-xl text-xl"
+      className="bg-accent_background text-white w-full  p-4 md:py-5 md:px-10 rounded-xl text-xl"
       onClick={onClick}
     >
       {children}

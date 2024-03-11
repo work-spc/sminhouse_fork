@@ -36,7 +36,7 @@ export const SystemModules: React.FC = () => {
     <div className="m-auto mb-20 md:mb-40 flex flex-wrap md:flex-nowrap">
       <div className="w-full md:w-1/2">
         <div className="background-img-best-solutions">
-          <h2 className="md:text-centermd:text-5xl text-3xl font-bold mb-6 md:mb-9">
+          <h2 className="md:text-5xl text-3xl font-bold mb-6 md:mb-9">
             Модули системы
           </h2>
           {isMobile ? (
