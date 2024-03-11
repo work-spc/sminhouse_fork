@@ -49,7 +49,7 @@ export const OurPartners: React.FC = () => {
           <OurPartnersItems children={sixth_mobile}></OurPartnersItems>
         </div>
       </div>
-      <div className="flex justify-between wrap md:nowrap px-11 p-20 z-1 margin-partners text-left border rounded-b-2xl border-dark_background ">
+      <div className="flex justify-between flex-wrap md:flex-wrap px-5 pt-16 pb-11 md:px-11 md:pt-20 md:p-14 z-1 margin-partners text-left border rounded-b-2xl border-dark_background ">
         <div className="w-full md:w-2/5">
           <h2 className="md:text-5xl text-3xl font-bold mb-3">
             Станьте нашим партнером
@@ -58,7 +58,7 @@ export const OurPartners: React.FC = () => {
             Для обсуждения подробностей сотрудничества заполните форму обратной
             связи
           </h3>
-          <p className="text-gray_font text-lg md:text-xl">
+          <p className="hidden md:block text-gray_font text-lg md:text-xl">
             Продолжив, вы соглашаетесь с политикой конфиденциальности ООО
             “ИНТЕГРОСИСТЕМС”
           </p>
@@ -68,10 +68,14 @@ export const OurPartners: React.FC = () => {
           <WhiteInput type="mail" placeholder="E-mail*"></WhiteInput>
           <WhiteInput type="tel" placeholder="(___) ___-__-__"></WhiteInput>
           <div className="w-full mb-3 md:m-0 flex">
-            <div className="ml-auto">
+            <div className="w-full md:w-auto ml-auto">
               <Button children="Стать партнером" />
             </div>
           </div>
+          <p className="block md:hidden text-center text-gray_font text-sm md:text-lg">
+            Продолжив, вы соглашаетесь с политикой конфиденциальности ООО
+            “ИНТЕГРОСИСТЕМС”
+          </p>
         </div>
       </div>
     </div>
