@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex text-accent_font hidden lg:flex">
+      <div className=" text-accent_font hidden lg:flex">
         <button className="mr-6">+7(800)800-80-80</button>
         <button className="flex px-6 py-3.5 items-center border rounded-2xl border-accent_border">
           <p className="mr-3">Войти</p>
