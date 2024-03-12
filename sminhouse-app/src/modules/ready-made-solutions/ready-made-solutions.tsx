@@ -12,7 +12,7 @@ export const ReadyMadeSolutions: React.FC = () => {
         <img className=" w-56 md:w-auto m-auto z-10" src={phone} alt="" />
       </div>
       <img
-        className="relative hidden md:block z-10 w-56 md:w-auto"
+        className="relative hidden md:block z-10 w-56 md:w-2/6"
         src={phone}
         alt=""
       />

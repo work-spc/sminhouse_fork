@@ -1,4 +1,19 @@
 .our_process {
-  height: 48%;
+  height: 48.5%;
   width: 46%;
 }
+.our-process-background {
+  background-image: url(../../icons/our-process/background.png);
+  background-size: ;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.shadow-our-process {
+  -webkit-box-shadow: inset 8px 8px 0px 62px rgba(249, 251, 252, 1);
+  -moz-box-shadow: inset 8px 8px 0px 62px rgba(249, 251, 252, 1);
+  box-shadow: inset 8px 8px 0px 62px rgba(249, 251, 252, 1);
+}
+
+/* .img-our-process {
+} */

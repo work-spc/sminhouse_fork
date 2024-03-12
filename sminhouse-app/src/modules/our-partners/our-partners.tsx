@@ -18,7 +18,7 @@ import sixth_mobile from "../../icons/our-partners/mobile/sixth.svg";
 
 export const OurPartners: React.FC = () => {
   return (
-    <div className="m-auto mb-20 md:mb-4 text-left md:text-center row">
+    <div className="m-auto mb-20 md:mb-40 text-left md:text-center row">
       <div className="relative z-10 background-best-solutions rounded-2xl md:px-11 md:py-14 px-5 py-11">
         <h2 className="md:text-center text-white md:text-5xl text-3xl font-bold mb-6 md:mb-3">
           Наши партнеры
@@ -49,7 +49,7 @@ export const OurPartners: React.FC = () => {
           <OurPartnersItems children={sixth_mobile}></OurPartnersItems>
         </div>
       </div>
-      <div className="flex justify-between flex-wrap md:flex-wrap px-5 pt-16 pb-11 md:px-11 md:pt-20 md:p-14 z-1 margin-partners text-left border rounded-b-2xl border-dark_background ">
+      <div className="flex bg-white justify-between flex-wrap md:flex-wrap px-5 pt-16 pb-11 md:px-11 md:pt-20 md:p-14 z-1 margin-partners text-left border rounded-b-2xl border-dark_background ">
         <div className="w-full md:w-2/5">
           <h2 className="md:text-5xl text-3xl font-bold mb-3">
             Станьте нашим партнером

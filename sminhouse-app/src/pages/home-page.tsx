@@ -9,11 +9,14 @@ import { BestSolution } from "../modules/best-solution/best-solution";
 import { SystemModules } from "../modules/system-modules/system-modules";
 import { SecuritySystems } from "../modules/security-systems/security-systems";
 import { OurPartners } from "../modules/our-partners/our-partners";
+import { FrequentlyAskedQuestions } from "../modules/frequently-asked-questions/frequently-asked-questions";
+import { OtherQuestions } from "../modules/other-questions/other-questions";
+import { Footer } from "../modules/footer/footer";
 
 export const HomePage: React.FC = () => {
   return (
     <div className="font-sans font-normal text-dark_font bg-main_background px-5 md:px-9 py-6 ">
-      {/* <Navbar></Navbar> */}
+      <Navbar></Navbar>
       <div className="max-w-1368 p-0 md:px-11 m-auto">
         <TopSection></TopSection>
         <AutomationProcesses></AutomationProcesses>
@@ -23,6 +26,9 @@ export const HomePage: React.FC = () => {
         <SystemModules></SystemModules>
         {/* <SecuritySystems></SecuritySystems> */}
         <OurPartners></OurPartners>
+        <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
+        <OtherQuestions></OtherQuestions>
+        <Footer></Footer>
       </div>
     </div>
   );
