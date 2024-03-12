@@ -3,16 +3,14 @@ import "./style.css";
 import first from "../../icons/system-modules/slide-first.png";
 import buttons from "../../icons/system-modules/buttons.png";
 import buttons_phone from "../../icons/system-modules/buttons-phone.svg";
-// import second from "../../icons/swiper-main/slide-second.png";
-// import third from "../../icons/swiper-main/slide-third.png";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./style.css";
-// import required modules
+
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 import { Button } from "../../components/button/button";

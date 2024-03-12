@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { ListWithHeader } from "../../components/list-with-header/list-with-header";
 import settings from "../../icons/our-process/settings.svg";
 import background from "../../icons/our-process/background.png";
 import "./style.css";

@@ -1,13 +1,10 @@
-// import "./style.css";
-
 import union from "../../icons/security-systems/union.svg";
-// import first111 from "../../icons/security-systems/111.png";
+
 import first from "../../icons/security-systems/Subtract.png";
 import second from "../../icons/security-systems/Subtract-1.png";
 import third from "../../icons/security-systems/Subtract-2.png";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 import "./style.css";
-// Import Swiper styles
 
 export const SecuritySystems: React.FC = () => {
   return (

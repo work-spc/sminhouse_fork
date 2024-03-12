@@ -4,7 +4,7 @@ import arrow_input from "../../icons/navbar/arrow-input.svg";
 
 export const Navbar: React.FC = () => {
   return (
-    <div className=" max-w-1368 m-auto px-4 mdpx-11 mb-10 py-5 flex justify-between items-center border rounded-2xl border-gray_border">
+    <div className="z-30 max-w-1368 bg-white m-auto px-4 mdpx-11 mb-10 py-5 flex justify-between items-center border rounded-2xl border-gray_border">
       <button>
         <img src={logo} alt="" />
       </button>

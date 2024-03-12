@@ -1,13 +1,11 @@
 import React from "react";
 import { Navbar } from "../modules/navbar/navbar";
 import { TopSection } from "../modules/top-section/top-section";
-import { SwiperMain } from "../components/swiper/swiper";
 import { AutomationProcesses } from "../modules/automation-processes/automation-processes";
 import { OurProcess } from "../modules/our-process/our-process";
 import { ReadyMadeSolutions } from "../modules/ready-made-solutions/ready-made-solutions";
 import { BestSolution } from "../modules/best-solution/best-solution";
 import { SystemModules } from "../modules/system-modules/system-modules";
-import { SecuritySystems } from "../modules/security-systems/security-systems";
 import { OurPartners } from "../modules/our-partners/our-partners";
 import { FrequentlyAskedQuestions } from "../modules/frequently-asked-questions/frequently-asked-questions";
 import { OtherQuestions } from "../modules/other-questions/other-questions";

@@ -1,6 +1,5 @@
 import "./style.css";
 
-import InputBestSolution from "../../components/best-solution-input/best-solution-input";
 import { Button } from "../../components/button/button";
 import { OurPartnersItems } from "../../components/our-partners-items/our-partners-items";
 import { WhiteInput } from "../../components/white-input/white-input";

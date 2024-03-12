@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { ListWithHeader } from "../../components/list-with-header/list-with-header";
 import logo from "../../icons/automation-processes/logo.svg";
 import button from "../../icons/automation-processes/round-button.svg";

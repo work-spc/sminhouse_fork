@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import phone from "../../icons/ready-made-solutions/phone.png";
 import background from "../../icons/ready-made-solutions/background.svg";
 import { ReadySolutionsItem } from "../../components/ready-solutions-item/ready-solutions-item";

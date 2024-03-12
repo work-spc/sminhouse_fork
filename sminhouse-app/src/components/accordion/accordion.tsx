@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, ReactNode } from "react";
 import { motion } from "framer-motion";
 import button from "../../icons/accordion/button.svg";
+interface AccordionItemProps {
+  title: string;
+  children: ReactNode;
+}
 
-const AccordionItem: React.FC<{ title: string }> = ({ title, children }) => {
+const AccordionItem: React.FC<AccordionItemProps> = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {

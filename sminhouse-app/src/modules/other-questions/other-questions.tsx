@@ -1,20 +1,8 @@
 import "./style.css";
 
-import InputBestSolution from "../../components/best-solution-input/best-solution-input";
 import { Button } from "../../components/button/button";
-import { OurPartnersItems } from "../../components/our-partners-items/our-partners-items";
-import { WhiteInput } from "../../components/white-input/white-input";
-import first from "../../icons/our-partners/first.svg";
-import third from "../../icons/our-partners/third.svg";
-import second from "../../icons/our-partners/second.svg";
-import sixth from "../../icons/our-partners/sixth.svg";
 
-import first_mobile from "../../icons/our-partners/mobile/first.svg";
-import second_mobile from "../../icons/our-partners/mobile/second.svg";
-import third_mobile from "../../icons/our-partners/mobile/third.svg";
-import fourth_mobile from "../../icons/our-partners/mobile/fourth.svg";
-import fifth_mobile from "../../icons/our-partners/mobile/fifth.svg";
-import sixth_mobile from "../../icons/our-partners/mobile/sixth.svg";
+import { WhiteInput } from "../../components/white-input/white-input";
 
 export const OtherQuestions: React.FC = () => {
   return (

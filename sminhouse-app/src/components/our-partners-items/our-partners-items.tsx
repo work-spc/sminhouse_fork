@@ -1,6 +1,6 @@
 import "./style.css";
 
-import React, { FC, MouseEventHandler } from "react";
+import { FC } from "react";
 
 interface OurPartnersItemsProps {
   children?: string;

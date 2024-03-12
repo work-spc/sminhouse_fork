@@ -1,7 +1,6 @@
 import "./style.css";
 
 import InputBestSolution from "../../components/best-solution-input/best-solution-input";
-import { Button } from "../../components/button/button";
 
 export const BestSolution: React.FC = () => {
   return (
