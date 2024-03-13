@@ -1,7 +1,5 @@
 import "./style.css";
 
-import { Button } from "../../components/button/button";
-
 import { WhiteInput } from "../../components/white-input/white-input";
 
 export const OtherQuestions: React.FC = () => {
@@ -17,14 +15,29 @@ export const OtherQuestions: React.FC = () => {
           </h3>
         </div>
         <div className="flex-wrap lg:flex-nowrap gap-6 wrap w-full h-full flex gap-x-6 mb-6 md:mb-9">
-          <WhiteInput type="text" placeholder="Имя*"></WhiteInput>
-          <WhiteInput type="mail" placeholder="E-mail*"></WhiteInput>
-          <WhiteInput type="tel" placeholder="(___) ___-__-__"></WhiteInput>
-          <Button children="Стать партнером" />
+          <div className="w-full ">
+            <WhiteInput type="text" placeholder="Имя*"></WhiteInput>
+          </div>
+          <div className="w-full ">
+            <WhiteInput type="mail" placeholder="E-mail*"></WhiteInput>
+          </div>
+          <div className="w-full ">
+            <WhiteInput type="tel" placeholder="(___) ___-__-__"></WhiteInput>
+          </div>
+
+          <button
+            className="bg-accent_background w-full  md:min-h-16 text-white py-4 rounded-lg text-xl"
+            // onClick={onClick}
+          >
+            Получить консультацию
+          </button>
         </div>
         <p className="block  text-center text-gray_font text-sm md:text-lg">
-          Продолжив, вы соглашаетесь с политикой конфиденциальности ООО
-          “ИНТЕГРОСИСТЕМС”
+          Продолжив, вы соглашаетесь с
+          <a className="underline" href="">
+            политикой конфиденциальности
+          </a>
+          ООО “ИНТЕГРОСИСТЕМС”
         </p>
       </div>
     </div>

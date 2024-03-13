@@ -14,8 +14,9 @@ export const AutomationProcesses: React.FC = () => {
           доступно в один клик.
         </p>
       </div>
-      <div className="flex flex-wrap md:flex-nowrap gap-y-9 md:gap-x-9">
-        <div className="flex flex-wrap gap-y-4 md:gap-y-9 ">
+      <div className="flex w-full flex-wrap md:flex-nowrap gap-9">
+        {/* <div className="bg-gray-500 h-36 w-1/2"></div> */}
+        <div className="md:w-3/5 flex flex-wrap gap-y-4 md:gap-y-9 ">
           <div className="w-full">
             <ListWithHeader
               title="Широкие возможности"
@@ -44,7 +45,7 @@ export const AutomationProcesses: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-2xl pt-48 md:p-6 w-full background-container flex flex-col justify-end">
+        <div className="rounded-2xl pt-48 md:p-6 w-2/5 background-container flex flex-col justify-end">
           <div className="p-5 rounded-2xl bg-gray-200 bg-opacity-10 border border-white border-opacity-20 backdrop-blur-md">
             <div className="flex text-white gap-x-4">
               <img className="w-11 md:w-14" src={logo} alt="" />

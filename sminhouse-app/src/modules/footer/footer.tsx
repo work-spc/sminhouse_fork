@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="text-gray_font">
       <div className="md:flex mb-9">
         <div className="md:w-1/2">
-          <img className="mx-auto md-mx-0 mb-9 md:mb-7" src={logo} alt="" />
+          <img className="mr-auto md-mx-0 mb-9 md:mb-7" src={logo} alt="" />
           <p className="hidden md:block mb-4  text-gray_font">
             Краснодарский край, г. Сочи,
             <br /> ул. Пластунская, д.96 пом 6/1
@@ -32,21 +32,21 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="md:w-1/4 text-light_dark_font font-medium flex flex-col justify-between">
+        <div className="md:w-1/5 text-light_dark_font font-medium flex flex-col justify-between">
           <div className="flex gap-2 justify-evenly md:justify-between mb-6 md:mb-0">
             <img className="" src={dzen} alt="" />
             <img className="" src={youtube} alt="" />
             <img className="" src={vk} alt="" />
             <img className="" src={telegram} alt="" />
           </div>
-          <div className="md:h-1/2 mb-4 md:mb-0 text-center md:text-right flex flex-col justify-between">
+          <div className="md:h-1/2 mb-4 md:mb-0 text-center md:text-left flex flex-col justify-between">
             <p className="mb-4 md:mb-0">+7 961 582 02 02</p>
             <p>shadow.sochi@gmail.com</p>
           </div>
         </div>
       </div>
       <hr className="mt-4 border-gray_border mb-9" />
-      <div className="container mx-auto md:flex text-center md:text-right">
+      <div className="container mx-auto md:flex text-center md:text-left">
         <div className="md:w-1/2 mb-4 md:mb-0">
           <p>© ООО “ИНТЕГРОСИСТЕМС”, 2024</p>
         </div>

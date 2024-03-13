@@ -23,7 +23,7 @@ export const WhiteInput: React.FC<UniversalInputProps> = ({
         <input
           type={type}
           placeholder={placeholder}
-          className="border border-gray_border bg-white w-full rounded-md py-2 pr-5 pl-20 h-full md:h-16 text-black leading-tight focus:outline-none focus:bg-opacity-15"
+          className="border border-gray_border bg-white w-full rounded-md py-2 pr-5 pl-20 h-full md:h-16 text-black leading-tight focus:outline-none focus:bg-hover_form"
           style={{ caretColor: "black", fontSize: "20px" }}
         />
       </div>
@@ -34,7 +34,7 @@ export const WhiteInput: React.FC<UniversalInputProps> = ({
       <input
         type={type}
         placeholder={placeholder}
-        className="border border-gray_border bg-white rounded-md h-full px-5 md:h-16 w-full text-black leading-tight focus:outline-none focus:bg-opacity-15"
+        className="border border-gray_border bg-white rounded-md h-full px-5 md:h-16 w-full text-black leading-tight focus:outline-none focus:bg-hover_form"
         style={{ caretColor: "black", fontSize: "20px" }}
       />
     </div>

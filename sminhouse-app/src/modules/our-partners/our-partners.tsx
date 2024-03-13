@@ -19,7 +19,7 @@ export const OurPartners: React.FC = () => {
   return (
     <div className="m-auto mb-20 md:mb-40 text-left md:text-center row">
       <div className="relative z-10 background-best-solutions rounded-2xl md:px-11 md:py-14 px-5 py-11">
-        <h2 className="md:text-center text-white md:text-5xl text-3xl font-bold mb-6 md:mb-3">
+        <h2 className="md:text-center text-white md:text-5xl text-3xl font-bold mb-6 md:mb-11">
           Наши партнеры
         </h2>
         <div className="grid-cols-2 hidden md:grid md:grid-cols-3 gap-4 md:gap-9">
@@ -58,8 +58,11 @@ export const OurPartners: React.FC = () => {
             связи
           </h3>
           <p className="hidden md:block text-gray_font text-lg md:text-xl">
-            Продолжив, вы соглашаетесь с политикой конфиденциальности ООО
-            “ИНТЕГРОСИСТЕМС”
+            Продолжив, вы соглашаетесь с{" "}
+            <a className="underline" href="">
+              политикой конфиденциальности
+            </a>{" "}
+            ООО “ИНТЕГРОСИСТЕМС”
           </p>
         </div>
         <div className="w-full md:w-2/5 flex flex-col gap gap-y-6">
@@ -72,8 +75,11 @@ export const OurPartners: React.FC = () => {
             </div>
           </div>
           <p className="block md:hidden text-center text-gray_font text-sm md:text-lg">
-            Продолжив, вы соглашаетесь с политикой конфиденциальности ООО
-            “ИНТЕГРОСИСТЕМС”
+            Продолжив, вы соглашаетесь с
+            <a className="underline" href="">
+              политикой конфиденциальности
+            </a>
+            ООО “ИНТЕГРОСИСТЕМС”
           </p>
         </div>
       </div>

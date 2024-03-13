@@ -11,7 +11,7 @@ const InputBestSolution: React.FC<UniversalInputProps> = ({
 }) => {
   if (type === "tel") {
     return (
-      <div className="relative h-14  md:h-auto w-full md:w-1/4">
+      <div className="relative h-14  md:min-h-16 w-full md:w-1/4">
         <img
           className="absolute top-1/2 transform -translate-y-1/2 ml-5"
           src={ru}
@@ -23,14 +23,14 @@ const InputBestSolution: React.FC<UniversalInputProps> = ({
         <input
           type={type}
           placeholder={placeholder}
-          className="border border-white border-opacity-10 bg-gray-100 bg-opacity-10 w-full rounded-md py-2 pr-5 pl-20 h-full text-white leading-tight focus:outline-none focus:bg-opacity-15"
+          className="border border-white border-opacity-10 bg-gray-100 bg-opacity-10 w-full rounded-lg py-2 pr-5 pl-20 h-full text-white leading-tight focus:outline-none focus:bg-opacity-15"
           style={{ caretColor: "white", fontSize: "20px" }}
         />
       </div>
     );
   }
   return (
-    <div className="relative h-14 md:h-auto w-full md:w-1/4">
+    <div className="relative h-14 md:min-h-16 w-full md:w-1/4">
       <input
         type={type}
         placeholder={placeholder}

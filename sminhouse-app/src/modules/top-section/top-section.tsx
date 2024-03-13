@@ -40,16 +40,14 @@ export const TopSection: React.FC = () => {
           <div>
             <div className="flex gap-x-9">
               <div className="w-1/2 border p-5 grow rounded-2xl bg-white border-gray_border ">
-                <p className="font-bold text-4xl text-light_accent_font">
+                <p className="font-bold text-4xl  text-accent_font">
                   с 2010 года
                 </p>
                 <p className="text-light_dark_font">занимаемся интеграцией</p>
               </div>
 
               <div className="w-1/2 border p-5 grow rounded-2xl bg-white border-gray_border ">
-                <p className="font-bold text-4xl text-light_accent_font">
-                  4 000+
-                </p>
+                <p className="font-bold text-4xl  text-accent_font">4 000+</p>
                 <p className="text-light_dark_font">
                   квартир подключили наши инженеры
                 </p>
@@ -62,7 +60,7 @@ export const TopSection: React.FC = () => {
       {isMobile ? (
         <div className="flex w-full z-10 gap-y-4 mt-9 flex-wrap text-center">
           <div className="w-full border p-5 grow rounded-2xl bg-white border-gray_border ">
-            <p className="font-bold text-3xl md:text-4xl text-light_accent_font">
+            <p className="font-bold text-3xl md:text-4xl text-accent_font">
               с 2010 года
             </p>
             <p className="text-light_dark_font text-sm">
@@ -71,7 +69,7 @@ export const TopSection: React.FC = () => {
           </div>
 
           <div className="w-full border p-5 grow rounded-2xl bg-white border-gray_border ">
-            <p className="font-bold text-3xl md:text-4xl text-light_accent_font">
+            <p className="font-bold text-3xl md:text-4xl  text-accent_font">
               4 000+
             </p>
             <p className="text-light_dark_font text-sm">

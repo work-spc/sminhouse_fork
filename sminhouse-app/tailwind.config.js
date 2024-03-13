@@ -19,6 +19,7 @@ export default {
         gray_background: "#EDF2F7",
         main_background: "#F9FBFC",
         accent_background: "#0BC5EA",
+        hover_form: "#F7FAFC",
       },
       fontFamily: {
         sans: ["PT Root UI", "sans"],

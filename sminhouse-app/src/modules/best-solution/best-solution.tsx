@@ -24,7 +24,7 @@ export const BestSolution: React.FC = () => {
             placeholder="(___) ___-__-__"
           ></InputBestSolution>
           <button
-            className="w-full md:w-auto  text-white  p-4 md:py-5 md:px-9 rounded-xl text-lg md:text-xl bg-accent_background"
+            className="w-full md:h-16 md:w-1/4  text-white   md:py-5 rounded-lg text-lg md:text-xl bg-accent_background"
             // onClick={onClick}
           >
             <div
@@ -39,8 +39,11 @@ export const BestSolution: React.FC = () => {
           </button>
         </div>
         <h3 className="text-center text-gray_font text-lg md:text-xl">
-          Закажите индивидуальное решение и наш менеджер свяжется с вами в
-          ближайшее время
+          Продолжив, вы соглашаетесь с{" "}
+          <a className="underline" href="">
+            политикой конфиденциальности
+          </a>{" "}
+          ООО “ИНТЕГРОСИСТЕМС”
         </h3>
       </div>
     </div>
