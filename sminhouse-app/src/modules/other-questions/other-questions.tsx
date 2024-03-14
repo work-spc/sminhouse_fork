@@ -26,7 +26,7 @@ export const OtherQuestions: React.FC = () => {
           </div>
 
           <button
-            className="bg-accent_background w-full  md:min-h-16 text-white py-4 rounded-lg text-xl"
+            className="bg-accent_background w-full  md:min-h-16 text-white py-4 rounded-lg text-xl active:bg-button_click hover:bg-button_hover duration-300"
             // onClick={onClick}
           >
             Получить консультацию

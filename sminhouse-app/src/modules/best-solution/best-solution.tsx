@@ -24,11 +24,11 @@ export const BestSolution: React.FC = () => {
             placeholder="(___) ___-__-__"
           ></InputBestSolution>
           <button
-            className="w-full md:h-16 md:w-1/4  text-white   md:py-5 rounded-lg text-lg md:text-xl bg-accent_background"
+            className="w-full md:h-16 md:w-1/4  text-white   md:py-5 rounded-lg text-lg md:text-xl bg-accent_background active:bg-button_click hover:bg-button_hover duration-300"
             // onClick={onClick}
           >
             <div
-              className="text-lg md:text-xl"
+              className="text-lg md:text-xl "
               style={{
                 caretColor: "white",
                 whiteSpace: "nowrap",

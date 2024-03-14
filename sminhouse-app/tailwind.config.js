@@ -8,6 +8,8 @@ export default {
         1280: "1280px",
       },
       colors: {
+        button_hover: "#00A3C4",
+        button_click: "#086F83",
         dark_font: "#2D3748",
         light_dark_font: "#42526B",
         gray_font: "#A0A8B5",
