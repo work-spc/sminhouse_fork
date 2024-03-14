@@ -45,7 +45,7 @@ export const AutomationProcesses: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="rounded-2xl pt-48 md:p-6 w-2/5 background-container flex flex-col justify-end">
+        <div className="rounded-2xl pt-48 md:p-6 w-full md:w-2/5 background-container flex flex-col justify-end">
           <div className="p-5 rounded-2xl bg-gray-200 bg-opacity-10 border border-white border-opacity-20 backdrop-blur-md">
             <div className="flex text-white gap-x-4">
               <img className="w-11 md:w-14" src={logo} alt="" />

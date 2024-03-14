@@ -1,11 +1,12 @@
 import logo from "../../icons/navbar/logo.svg";
 import button from "../../icons/navbar/button.svg";
 import arrow_input from "../../icons/navbar/arrow-input.svg";
+import "./style.css";
 
 export const Navbar: React.FC = () => {
   return (
-    <div>
-      <div className="z-30 fixed  bg-white m-auto px-4 mdpx-11 mb-10 py-5 flex justify-between items-center border rounded-2xl border-gray_border">
+    <div className=" z-30 navbar pt-6">
+      <div className="z-30  bg-white m-auto px-4 mdpx-11 mb-10 py-5 flex justify-between items-center border rounded-2xl border-gray_border">
         <button>
           <img src={logo} alt="" />
         </button>
