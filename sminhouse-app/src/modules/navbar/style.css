@@ -4,3 +4,8 @@
   top: 0;
   margin: -44px;
 }
+@media (max-width: 768px) {
+  .navbar {
+    margin: 0; /* Убираем отступ */
+  }
+}

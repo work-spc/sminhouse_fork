@@ -6,7 +6,7 @@ import "./style.css";
 export const Navbar: React.FC = () => {
   return (
     <div className=" z-30 navbar pt-6 max-w-1368">
-      <div className="z-30  bg-white bg-opacity-80 backdrop-blur-sm m-auto px-11 mdpx-11 mb-10 py-5  flex justify-between items-center border rounded-2xl ">
+      <div className="z-30  bg-white bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11 mdpx-11  md:mb-10 py-5  flex justify-between items-center border rounded-2xl ">
         <button>
           <img src={logo} alt="" />
         </button>

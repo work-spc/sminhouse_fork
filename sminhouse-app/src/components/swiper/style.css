@@ -1,0 +1,20 @@
+/* styles.css */
+
+/* Изменение изображения кнопки "Назад" */
+.swiper-button-prev {
+  content: url("../../../src/icons/swiper-main/button-left.svg");
+}
+
+/* Изменение изображения кнопки "Вперед" */
+.swiper-button-next {
+  content: url("../../../src/icons/swiper-main/button-right.svg");
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00a3c4; /* Новый цвет для активной точки пагинации */
+}
+
+/* Изменение цвета неактивных точек пагинации */
+.swiper-pagination-bullet {
+  background-color: #00a3c4; /* Новый цвет для неактивных точек пагинации */
+}

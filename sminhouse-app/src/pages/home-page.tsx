@@ -10,10 +10,11 @@ import { OurPartners } from "../modules/our-partners/our-partners";
 import { FrequentlyAskedQuestions } from "../modules/frequently-asked-questions/frequently-asked-questions";
 import { OtherQuestions } from "../modules/other-questions/other-questions";
 import { Footer } from "../modules/footer/footer";
+import { SecuritySystems } from "../modules/security-systems/security-systems";
 
 export const HomePage: React.FC = () => {
   return (
-    <div className="font-sans font-medium text-dark_font bg-main_background px-5 md:px-9 py-6 ">
+    <div className="font-sans font-medium text-dark_font bg-main_background px-5 md:px-9 md:py-6 ">
       <div className="max-w-1368 p-0 md:px-11 m-auto">
         <Navbar></Navbar>
         <TopSection></TopSection>
@@ -22,7 +23,7 @@ export const HomePage: React.FC = () => {
         <ReadyMadeSolutions></ReadyMadeSolutions>
         <BestSolution></BestSolution>
         <SystemModules></SystemModules>
-        {/* <SecuritySystems></SecuritySystems> */}
+        <SecuritySystems></SecuritySystems>
         <OurPartners></OurPartners>
         <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
         <OtherQuestions></OtherQuestions>
