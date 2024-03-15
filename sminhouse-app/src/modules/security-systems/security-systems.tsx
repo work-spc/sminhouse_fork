@@ -1,5 +1,3 @@
-import union from "../../icons/security-systems/union.svg";
-
 import first from "../../icons/security-systems/Subtract.webp";
 import second from "../../icons/security-systems/Subtract-1.webp";
 import third from "../../icons/security-systems/Subtract-2.webp";
