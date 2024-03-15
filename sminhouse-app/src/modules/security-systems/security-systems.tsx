@@ -11,7 +11,7 @@ export const SecuritySystems: React.FC = () => {
         <h2 className="md:text-center md:text-5xl text-3xl font-bold mb-6 md:mb-11">
           Современные системы безопасноти
         </h2>
-        <div className="flex gap-x-9 flex-wrap lg:flex-nowrap ">
+        <div className="flex gap-y-6 gap-x-9 flex-wrap lg:flex-nowrap ">
           <div className="security-systems-border">
             <img className="w-full" src={first} alt="" />
             <div className=" flex flex-col px-6 pb-6">
