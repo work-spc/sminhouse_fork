@@ -8,7 +8,7 @@ export const SecuritySystems: React.FC = () => {
   return (
     <div className="m-auto mb-20 md:mb-40 flex flex-wrap md:flex-nowrap">
       <div className="w-full">
-        <h2 className="md:text-center md:text-5xl text-3xl font-bold mb-6 md:mb-9">
+        <h2 className="md:text-center md:text-5xl text-3xl font-bold mb-6 md:mb-11">
           Современные системы безопасноти
         </h2>
         <div className="flex gap-x-9 flex-wrap lg:flex-nowrap ">
