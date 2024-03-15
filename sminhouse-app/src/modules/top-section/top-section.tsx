@@ -17,7 +17,7 @@ export const TopSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="m-auto mb-20 md:mb-40 flex md:flex-nowrap flex-wrap gap-x-9 ">
+    <div className="m-auto mb-20 md:mt-28 md:mb-40 flex md:flex-nowrap flex-wrap gap-x-9 ">
       {/* <img src={background_img} className="absolute z-0" alt="" /> */}
       <div className="w-full z-10 md:w-3/5">
         <h1 className="font-bold pt-6 md:text-6xl text-4xl">
