@@ -1,7 +1,7 @@
 .security-systems-border {
   width: 100%;
   border: 1px solid #a1c2d5; /* Цвет границы */
-  border-radius: 18px; /* Скругление углов */
+  border-radius: 5%; /* Скругление углов */
   overflow: hidden; /* Скрытие за пределами содержимого */
 }
 .security-systems-margin-top {

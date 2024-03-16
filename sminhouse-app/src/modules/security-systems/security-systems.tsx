@@ -28,7 +28,7 @@ export const SecuritySystems: React.FC = () => {
           <div className="security-systems-border">
             <img className="w-full" src={second} alt="" />
             <div className=" flex flex-col px-6 pb-6">
-              <p className="font-bold text-2xl mb-6 security-systems-margin-top">
+              <p className="font-bold w-1/2 text-2xl mb-6 security-systems-margin-top">
                 Ajax Systems
               </p>
               <p className="text-xl mb-6">

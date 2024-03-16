@@ -1,6 +1,7 @@
 import React, { useState, ReactNode } from "react";
 import { motion } from "framer-motion";
 import button from "../../icons/accordion/button.svg";
+import button_minus from "../../icons/accordion/button-minus.svg";
 import "./style.css";
 interface AccordionItemProps {
   title: string;
@@ -17,19 +18,29 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children }) => {
   return (
     <div className="bg-white border border-gray_border rounded-2xl mb-2">
       <div
-        className="flex items-center justify-between px-6 pt-6 mb-4 cursor-pointer"
+        className="flex items-center justify-between p-6 cursor-pointer"
         onClick={toggleAccordion}
       >
         <h2 className="text-lg md:text-2xl mr-4 font-bold text-dark_font">
           {title}
         </h2>
-        <img
-          src={button}
-          alt=""
-          className={`focus:outline-none transform transition-transform ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
+        {isOpen ? (
+          <img
+            src={button_minus}
+            alt=""
+            className={`focus:outline-none transform transition-transform ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          />
+        ) : (
+          <img
+            src={button}
+            alt=""
+            className={`focus:outline-none transform transition-transform ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          />
+        )}
       </div>
       <motion.div
         initial={{ height: 0, opacity: 0 }}
