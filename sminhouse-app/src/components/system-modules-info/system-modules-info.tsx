@@ -133,13 +133,17 @@ export const SystemModulesInfo: React.FC = () => {
 };
 
 const Button: React.FC<ButtonProps> = ({ text, active, onClick }) => {
+  const buttonClass = active
+    ? "px-9 py-3 rounded-lg text-white bg-accent_background transition-all duration-200"
+    : "px-9 py-3 rounded-lg bg-gray_background hover:bg-button_modules_info_hover transition-all duration-200";
   return (
     <motion.button
-      className="px-9 py-3 rounded-lg text-white"
-      style={{
-        backgroundColor: active ? "#0BC5EA" : "#EDF2F7",
-        color: active ? "#FFF" : "#42526B",
-      }}
+      className={buttonClass}
+      // style={{
+      //   backgroundColor: active ? "#0BC5EA" : "#EDF2F7",
+      //   color: active ? "#FFF" : "#42526B",
+      // }}
+      // whileHover={!active && { backgroundColor: "#D4DEE9", color: "#FFF" }}
       transition={{ duration: 0.3 }}
       onClick={onClick}
       disabled={active}

@@ -9,6 +9,7 @@ export default {
       },
       colors: {
         button_hover: "#00A3C4",
+        button_modules_info_hover: "#D4DEE9",
         button_click: "#086F83",
         dark_font: "#2D3748",
         light_dark_font: "#42526B",
