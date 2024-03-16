@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
 
         <div className=" text-accent_font hidden lg:flex">
           <button className="mr-6">+7(800)800-80-80</button>
-          <button className="flex px-6 py-3.5 items-center border rounded-2xl border-accent_border hover:bg-accent_background hover:bg-opacity-10 duration-300">
+          <button className="border-button-half flex px-6 py-3.5 items-center rounded-lg border-accent_border hover:bg-accent_background hover:bg-opacity-10 duration-300">
             <p className="mr-3">Войти</p>
             <img src={arrow_input} alt="" />
           </button>
