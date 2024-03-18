@@ -36,12 +36,12 @@ export function SwiperMain() {
         <SwiperSlide className="md:py-12 flex flex-col SwiperSlide-2 items-center justify-center">
           <img className="hidden md:block px-16" src={second} alt="" />
           <div className="p-6 lock md:hidden flex-grow"></div>
-          <img className="block md:hidden" src={first_phone} alt="" />
+          <img className="block md:hidden" src={second_phone} alt="" />
         </SwiperSlide>
         <SwiperSlide className="md:py-12 flex flex-col SwiperSlide-3 items-center justify-center">
           <img className="hidden md:block px-16" src={third} alt="" />
           <div className="p-6 lock md:hidden flex-grow"></div>
-          <img className="block md:hidden" src={first_phone} alt="" />
+          <img className="block md:hidden" src={third_phone} alt="" />
         </SwiperSlide>
       </Swiper>
     </>
