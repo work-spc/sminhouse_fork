@@ -11,7 +11,7 @@ export const ListWithHeader: React.FC<ListWithHeaderProps> = ({
   items,
 }) => {
   return (
-    <div className="border p-5 grow rounded-2xl border-gray_border bg-white">
+    <div className="border p-6 md:p-8 grow rounded-2xl border-gray_border bg-white">
       <p className="font-bold text-2xl mb-4">{title}</p>
       <ul>
         {items.map((item, index) => (

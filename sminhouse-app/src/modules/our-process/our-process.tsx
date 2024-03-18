@@ -11,7 +11,7 @@ export const OurProcess: React.FC = () => {
       <div className="hidden md:block md:relative md:w-1/2">
         <div className="absolute pl-8 pt-9">
           <h2 className=" md:text-white md:text-5xl text-3xl font-bold mb-6 md:mb-2">
-            Готовые решения
+            Как мы работаем
           </h2>
           <p className="text-xl text-light_dark_font md:text-white  ">
             Комплексный и системный подход
@@ -37,7 +37,7 @@ export const OurProcess: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="md:hidden mb-8">
+      <div className="md:hidden mb-6">
         <h2 className=" md:text-white md:text-5xl text-3xl font-bold mb-1">
           Как мы работаем
         </h2>
@@ -56,6 +56,11 @@ export const OurProcess: React.FC = () => {
             title="Установка оборудования"
             text="В удобное время производим монтаж оборудования и обучаем работе с ним. Подписываем договор."
             image={third}
+          ></SystemSetupCard>
+          <SystemSetupCard
+            title="Настройка системы"
+            text="Запускаем систему и 24 часа в сутки наше предложение будет обеспечивать для вас контроль всех систем дома."
+            image={settings}
           ></SystemSetupCard>
           <SystemSetupCard
             title="Поддержка"
@@ -80,7 +85,7 @@ const SystemSetupCard: React.FC<SystemSetupCardProps> = ({
   image,
 }) => {
   return (
-    <div className="border min-h-64 mb-4 md:mb-0 w-full p-5 md:p-2 lg:p-3 xl:p-5 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between">
+    <div className="border min-h-64 mb-4 md:mb-0 w-full p-6 md:p-2 lg:p-3 xl:p-5 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between">
       <div className="flex items-center mb-9 md:m-0">
         <img
           className="mr-4 md:mr-1 lg:mr-2 md:w-8 lg:w-15 xl:w-auto"

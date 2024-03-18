@@ -126,7 +126,9 @@ export const SystemModulesInfo: React.FC = () => {
         animate={displayText ? "visible" : "hidden"}
         variants={variants}
       >
-        {displayText && <p className="mt-6 text-xl">{displayText}</p>}
+        {displayText && (
+          <p className="mt-6 text-lg md:text-xl">{displayText}</p>
+        )}
       </motion.div>
     </div>
   );

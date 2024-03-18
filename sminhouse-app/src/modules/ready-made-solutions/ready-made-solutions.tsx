@@ -1,7 +1,7 @@
 import phone from "../../icons/ready-made-solutions/phone.png";
 import background from "../../icons/ready-made-solutions/background.svg";
 import { ReadySolutionsItem } from "../../components/ready-solutions-item/ready-solutions-item";
-// import "./style.css";
+import "./style.css";
 
 export const ReadyMadeSolutions: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ export const ReadyMadeSolutions: React.FC = () => {
 
       <div className="w-full z-10">
         <h2 className="md:text-center md:text-5xl text-3xl font-bold mb-6 md:mb-9">
-          Как мы работаем
+          Готовые решения
         </h2>
         <div className="flex flex-wrap md:flex-nowrap gap-y-4 gap-x-9">
           <ReadySolutionsItem

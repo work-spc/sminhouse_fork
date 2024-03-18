@@ -1,0 +1,25 @@
+/* Стили для блока .paragraph_h1 */
+.paragraph_h1 {
+  background: #dff5f9;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+}
+
+/* Скрываем блок при разрешении 1399px и менее */
+@media (max-width: 1400px) {
+  .paragraph_h1 {
+    display: none;
+  }
+}
+.paragraph2_h1 {
+  background: #dff5f9;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+}
+@media (min-width: 1398px) {
+  .paragraph2_h1 {
+    display: none;
+  }
+}

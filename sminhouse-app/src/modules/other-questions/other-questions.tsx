@@ -25,15 +25,12 @@ export const OtherQuestions: React.FC = () => {
             <WhiteInput type="tel" placeholder="(___) ___-__-__"></WhiteInput>
           </div>
 
-          <button
-            className="bg-accent_background w-full  md:min-h-16 text-white py-4 rounded-lg text-xl active:bg-button_click hover:bg-button_hover duration-300"
-            // onClick={onClick}
-          >
+          <button className="bg-accent_background w-full min-h-14  md:min-h-16 text-white rounded-lg text-lg md:text-xl active:bg-button_click hover:bg-button_hover duration-300">
             Получить консультацию
           </button>
         </div>
-        <p className="block  text-center text-gray_font text-sm md:text-lg">
-          Продолжив, вы соглашаетесь с
+        <p className="block  text-center text-privacy_policy text-sm md:text-lg">
+          Продолжив, вы соглашаетесь с<span></span>
           <a className="underline" href="">
             политикой конфиденциальности
           </a>

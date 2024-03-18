@@ -23,25 +23,37 @@ export default {
         main_background: "#F9FBFC",
         accent_background: "#0BC5EA",
         hover_form: "#F7FAFC",
+        privacy_policy: "#A0AEC0",
       },
       fontFamily: {
         sans: ["PT Root UI", "sans"],
       },
       fontSize: {
-        // "2xl": [
-        //   "24px",
-        //   {
-        //     letterSpacing: "-0.01em",
-        //   },
-        // ],
-        // // Or with a default line-height as well
-        // "3xl": [
-        //   "32px",
-        //   {
-        //     letterSpacing: "-0.02em",
-        //     lineHeight: "40px",
-        //   },
-        // ],
+        "6xl": [
+          "64px",
+          {
+            lineHeight: "67px",
+          },
+        ],
+        // Or with a default line-height as well
+        "4xl": [
+          "39px",
+          {
+            lineHeight: "41px",
+          },
+        ],
+        "32px": [
+          "32px",
+          {
+            lineHeight: "32px",
+          },
+        ],
+        "22px": [
+          "22px",
+          {
+            lineHeight: "26px",
+          },
+        ],
       },
     },
   },

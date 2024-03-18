@@ -49,7 +49,26 @@ export const SystemModules: React.FC = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="w-full z-10 bg-gray_background  row rounded-2xl "
+          className="w-full z-10 bg-gray_background  row rounded-2xl hidden md:block"
+        >
+          <SwiperSlide className="flex items-center justify-center">
+            <img src={first} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide className="flex items-center justify-center">
+            <img src={first} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
+            <img src={first} alt="" />
+          </SwiperSlide>
+        </Swiper>
+        <Swiper
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          className="w-full z-10 bg-gray_background  row rounded-2xl block md:hidden"
         >
           <SwiperSlide className="flex items-center justify-center">
             <img src={first} alt="" />
@@ -64,7 +83,7 @@ export const SystemModules: React.FC = () => {
         </Swiper>
       </div>
       {isMobile ? (
-        <div className="mt-6 w-full">
+        <div className="md:mt-6 w-full">
           {" "}
           <Button children="Получить консультацию" type="outline"></Button>
         </div>

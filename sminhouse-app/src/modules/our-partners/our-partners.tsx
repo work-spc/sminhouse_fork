@@ -17,7 +17,13 @@ import sixth_mobile from "../../icons/our-partners/mobile/sixth.svg";
 
 export const OurPartners: React.FC = () => {
   return (
-    <div className="m-auto mb-20 md:mb-40 text-left md:text-center row">
+    <div
+      className="m-auto mb-20 md:mb-40 text-left md:text-center row"
+      style={{
+        marginRight: "-20px",
+        marginLeft: "-20px",
+      }}
+    >
       <div className="relative z-10 background-best-solutions rounded-2xl md:px-11 md:py-14 px-5 py-11">
         <h2 className="md:text-center text-white md:text-5xl text-3xl font-bold mb-6 md:mb-11">
           Наши партнеры
@@ -57,11 +63,11 @@ export const OurPartners: React.FC = () => {
             Для обсуждения подробностей сотрудничества заполните форму обратной
             связи
           </h3>
-          <p className="hidden md:block text-gray_font text-lg md:text-xl">
-            Продолжив, вы соглашаетесь с{" "}
+          <p className="hidden md:block text-privacy_policy text-lg md:text-xl">
+            Продолжив, вы соглашаетесь с<span></span>
             <a className="underline" href="">
               политикой конфиденциальности
-            </a>{" "}
+            </a>
             ООО “ИНТЕГРОСИСТЕМС”
           </p>
         </div>
@@ -70,7 +76,7 @@ export const OurPartners: React.FC = () => {
           <WhiteInput type="mail" placeholder="E-mail*"></WhiteInput>
           <WhiteInput type="tel" placeholder="(___) ___-__-__"></WhiteInput>
           <div className="w-full mb-3 md:m-0 flex">
-            <div className="w-full md:w-auto ml-auto">
+            <div className="w-full md:w-auto ml-auto ">
               <Button children="Стать партнером" />
             </div>
           </div>

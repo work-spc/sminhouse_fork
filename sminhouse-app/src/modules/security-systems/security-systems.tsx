@@ -15,12 +15,14 @@ export const SecuritySystems: React.FC = () => {
           <div className="security-systems-border">
             <img className="w-full" src={first} alt="" />
             <div className=" flex flex-col px-6 pb-6">
-              <p className="font-bold text-2xl mb-6 security-systems-margin-top">
+              <p className="font-bold text-22px md:text-2xl mb-6 security-systems-margin-top">
                 Imou
               </p>
-              <p className="text-xl mb-6">Беспроводная система безопасности</p>
+              <p className="text-lg md:text-xl mb-6">
+                Беспроводная система безопасности
+              </p>
 
-              <a className="text-accent_font text-xl" href="url">
+              <a className="text-accent_font text-lg md:text-xl" href="url">
                 Подробнее
               </a>
             </div>
@@ -28,14 +30,14 @@ export const SecuritySystems: React.FC = () => {
           <div className="security-systems-border">
             <img className="w-full" src={second} alt="" />
             <div className=" flex flex-col px-6 pb-6">
-              <p className="font-bold w-1/2 text-2xl mb-6 security-systems-margin-top">
+              <p className="font-bold w-1/2 text-22px md:text-2xl mb-6 security-systems-margin-top">
                 Ajax Systems
               </p>
-              <p className="text-xl mb-6">
+              <p className="text-lg md:text-xl mb-6">
                 Интеллектуальные системы видеонаблюдения
               </p>
 
-              <a className="text-accent_font text-xl" href="url">
+              <a className="text-accent_font text-lg md:text-xl" href="url">
                 Подробнее
               </a>
             </div>
@@ -43,14 +45,14 @@ export const SecuritySystems: React.FC = () => {
           <div className="security-systems-border">
             <img className="w-full" src={third} alt="" />
             <div className=" flex flex-col px-6 pb-6">
-              <p className="font-bold text-2xl mb-6 security-systems-margin-top">
+              <p className="font-bold text-22px md:text-2xl mb-6 security-systems-margin-top">
                 Macroscop
               </p>
-              <p className="text-xl mb-6">
+              <p className="text-lg md:text-xl mb-6">
                 Инновационные решения на рынке IP-видеонаблюдения
               </p>
 
-              <a className="text-accent_font text-xl" href="url">
+              <a className="text-accent_font text-lg md:text-xl" href="url">
                 Подробнее
               </a>
             </div>

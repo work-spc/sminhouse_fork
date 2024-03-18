@@ -4,7 +4,13 @@ import InputBestSolution from "../../components/best-solution-input/best-solutio
 
 export const BestSolution: React.FC = () => {
   return (
-    <div className="m-auto mb-20 md:mb-40 text-left md:text-center background-best-solutions row rounded-2xl ">
+    <div
+      className="m-auto mb-20 md:mb-40 text-left md:text-center background-best-solutions row rounded-2xl "
+      style={{
+        marginRight: "-20px",
+        marginLeft: "-20px",
+      }}
+    >
       <div className="background-img-best-solutions md:px-11 md:py-14 px-5 py-11">
         <h2 className="md:text-center text-white md:text-5xl text-3xl font-bold mb-2 md:mb-3">
           Подберем лучшее решение для вас
@@ -30,6 +36,8 @@ export const BestSolution: React.FC = () => {
             <div
               className="text-lg md:text-xl "
               style={{
+                paddingTop: "14px",
+                paddingBottom: "14px",
                 caretColor: "white",
                 whiteSpace: "nowrap",
               }}
@@ -38,11 +46,11 @@ export const BestSolution: React.FC = () => {
             </div>
           </button>
         </div>
-        <h3 className="text-center text-gray_font text-lg md:text-xl">
-          Продолжив, вы соглашаетесь с{" "}
+        <h3 className="text-center text-privacy_policy text-lg md:text-xl">
+          Продолжив, вы соглашаетесь с <span></span>
           <a className="underline" href="">
             политикой конфиденциальности
-          </a>{" "}
+          </a>
           ООО “ИНТЕГРОСИСТЕМС”
         </h3>
       </div>
