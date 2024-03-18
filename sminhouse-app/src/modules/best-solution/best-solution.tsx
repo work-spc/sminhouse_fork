@@ -38,7 +38,7 @@ export const BestSolution: React.FC = () => {
             </div>
           </button>
         </div>
-        <h3 className="text-center text-privacy_policy text-lg md:text-xl">
+        <h3 className="text-center text-privacy_policy text-sm md:text-lg">
           Продолжив, вы соглашаетесь с<span> </span>
           <a className="underline" href="">
             политикой конфиденциальности

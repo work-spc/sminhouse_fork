@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import "./style.css";
 import gear from "../../icons/system-modules/gear.svg";
+import "./style.css";
 
 interface ButtonProps {
   text: string;
@@ -10,16 +10,17 @@ interface ButtonProps {
 }
 
 const variants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };
 
 export const SystemModulesInfo: React.FC = () => {
   const [displayText, setDisplayText] = useState("");
   const [activeButton, setActiveButton] = useState(
     "При необходимости, заявки могут быть созданы жильцами и переданы управляющей компании"
-  ); // Задаем текст первой кнопки
-  const [key, setKey] = useState(0); // Добавляем ключ
+  );
+  const [key, setKey] = useState(0);
+  const [moduleInDevelopment, setModuleInDevelopment] = useState("");
 
   const buttonTexts = {
     text1:
@@ -38,7 +39,6 @@ export const SystemModulesInfo: React.FC = () => {
   };
 
   useEffect(() => {
-    // Обновляем текст при монтировании компонента
     setDisplayText(activeButton);
   }, [activeButton]);
 
@@ -46,27 +46,20 @@ export const SystemModulesInfo: React.FC = () => {
     if (activeButton !== text) {
       setDisplayText(text);
       setActiveButton(text);
-      setKey((prevKey) => prevKey + 1); // Изменяем ключ при каждом нажатии кнопки
+      setKey((prevKey) => prevKey + 1);
     }
   };
 
-  const [moduleInDevelopment, setModuleInDevelopment] = useState("");
-
-  // Остальной код без изменений...
+  const excludedBlocksRef = useRef<Array<HTMLDivElement | null>>([null, null]);
 
   const handleGearClick = (moduleName: string) => {
     if (moduleInDevelopment === moduleName) {
-      // Если текущий модуль уже открыт, закрываем его
       setModuleInDevelopment("");
     } else {
-      // Иначе открываем окно для выбранного модуля
       setModuleInDevelopment(moduleName);
     }
   };
 
-  // Остальной код без изменений...
-
-  console.log(moduleInDevelopment);
   return (
     <div className="flex flex-col">
       <div className="flex gap-3 flex-wrap text-lg">
@@ -105,63 +98,65 @@ export const SystemModulesInfo: React.FC = () => {
           active={activeButton === buttonTexts.text7}
           onClick={() => handleButtonClick(buttonTexts.text7)}
         />
-        <button
-          className="relative px-9 py-3 rounded-lg button-SystemModulesInfo"
-          style={{
-            backgroundColor: "#EDF2F7",
-            color: "#A0AEC0",
-          }}
-        >
-          <img
-            src={gear}
-            alt="Corner Image"
-            className="absolute hidden md:block z-50 top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
-            onClick={() => handleGearClick("Маркетплейс")}
-          />
-          {moduleInDevelopment === "Маркетплейс" && (
-            <motion.div
-              key={moduleInDevelopment}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={variants}
-              className="absolute moduleInDevelopment  bg-white px-9 py-4 border  text-light_dark_font"
+        <OutsideClickTracker onClickOutside={() => setModuleInDevelopment("")}>
+          <div className="flex">
+            <div
+              className="moduleInDevelopment"
+              ref={(ref) => (excludedBlocksRef.current[0] = ref)}
             >
-              Модуль "{moduleInDevelopment}" на данный момент находится в
-              разработке
-            </motion.div>
-          )}
-          Маркетплейс
-        </button>
+              <button className="relative px-9 py-3 rounded-lg button-SystemModulesInfo">
+                <img
+                  src={gear}
+                  alt="Corner Image"
+                  className="absolute hidden md:block z-50 top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
+                  onClick={() => handleGearClick("Маркетплейс")}
+                />
+                {moduleInDevelopment === "Маркетплейс" && (
+                  <motion.div
+                    key={moduleInDevelopment}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={variants}
+                    className="absolute moduleInDevelopment bg-white px-9 py-4 border  text-light_dark_font"
+                  >
+                    Модуль "{moduleInDevelopment}" на данный момент находится в
+                    разработке
+                  </motion.div>
+                )}
+                Маркетплейс
+              </button>
+            </div>
 
-        <button
-          className="relative px-9 py-3 rounded-lg button-SystemModulesInfo"
-          style={{
-            backgroundColor: "#EDF2F7",
-            color: "#A0AEC0",
-          }}
-        >
-          <img
-            src={gear}
-            alt="Corner Image"
-            className="absolute hidden md:block z-40 top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
-            onClick={() => handleGearClick("Домофония")}
-          />
-          {moduleInDevelopment === "Домофония" && (
-            <motion.div
-              key={moduleInDevelopment}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={variants}
-              className="absolute moduleInDevelopment-2 px-9 py-4 bg-white p-4 border text-light_dark_font "
+            <div
+              className="moduleInDevelopment"
+              ref={(ref) => (excludedBlocksRef.current[1] = ref)}
             >
-              Модуль "{moduleInDevelopment}" на данный момент находится в
-              разработке
-            </motion.div>
-          )}
-          Домофония
-        </button>
+              <button className="relative px-9 py-3 rounded-lg button-SystemModulesInfo">
+                <img
+                  src={gear}
+                  alt="Corner Image"
+                  className="absolute hidden md:block z-40 top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
+                  onClick={() => handleGearClick("Домофония")}
+                />
+                {moduleInDevelopment === "Домофония" && (
+                  <motion.div
+                    key={moduleInDevelopment}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={variants}
+                    className="absolute moduleInDevelopment-2 px-9 py-4 bg-white p-4 border text-light_dark_font "
+                  >
+                    Модуль "{moduleInDevelopment}" на данный момент находится в
+                    разработке
+                  </motion.div>
+                )}
+                Домофония
+              </button>
+            </div>
+          </div>
+        </OutsideClickTracker>
       </div>
       <motion.div
         key={key}
@@ -184,11 +179,6 @@ const Button: React.FC<ButtonProps> = ({ text, active, onClick }) => {
   return (
     <motion.button
       className={buttonClass}
-      // style={{
-      //   backgroundColor: active ? "#0BC5EA" : "#EDF2F7",
-      //   color: active ? "#FFF" : "#42526B",
-      // }}
-      // whileHover={!active && { backgroundColor: "#D4DEE9", color: "#FFF" }}
       transition={{ duration: 0.3 }}
       onClick={onClick}
       disabled={active}
@@ -196,4 +186,28 @@ const Button: React.FC<ButtonProps> = ({ text, active, onClick }) => {
       {text}
     </motion.button>
   );
+};
+
+const OutsideClickTracker: React.FC<{ onClickOutside: () => void }> = ({
+  children,
+  onClickOutside,
+}) => {
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      const isOutside = !(event.target as HTMLElement).closest(
+        ".moduleInDevelopment"
+      );
+      if (isOutside) {
+        onClickOutside();
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [onClickOutside]);
+
+  return <>{children}</>;
 };
