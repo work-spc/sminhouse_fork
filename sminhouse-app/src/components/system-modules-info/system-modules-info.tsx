@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, ReactNode } from "react";
 import { motion } from "framer-motion";
 import gear from "../../icons/system-modules/gear.svg";
 import "./style.css";
@@ -99,12 +99,18 @@ export const SystemModulesInfo: React.FC = () => {
           onClick={() => handleButtonClick(buttonTexts.text7)}
         />
         <OutsideClickTracker onClickOutside={() => setModuleInDevelopment("")}>
-          <div className="flex">
+          <div className="flex flex-wrap gap-3">
             <div
               className="moduleInDevelopment"
               ref={(ref) => (excludedBlocksRef.current[0] = ref)}
             >
-              <button className="relative px-9 py-3 rounded-lg button-SystemModulesInfo">
+              <button
+                style={{
+                  backgroundColor: "#EDF2F7",
+                  color: "#A0AEC0",
+                }}
+                className="relative px-9 py-3 rounded-lg button-SystemModulesInfo"
+              >
                 <img
                   src={gear}
                   alt="Corner Image"
@@ -118,7 +124,7 @@ export const SystemModulesInfo: React.FC = () => {
                     animate="visible"
                     exit="hidden"
                     variants={variants}
-                    className="absolute moduleInDevelopment bg-white px-9 py-4 border  text-light_dark_font"
+                    className="absolute moduleInDevelopment1 bg-white px-9 py-4 border  text-light_dark_font"
                   >
                     Модуль "{moduleInDevelopment}" на данный момент находится в
                     разработке
@@ -132,7 +138,13 @@ export const SystemModulesInfo: React.FC = () => {
               className="moduleInDevelopment"
               ref={(ref) => (excludedBlocksRef.current[1] = ref)}
             >
-              <button className="relative px-9 py-3 rounded-lg button-SystemModulesInfo">
+              <button
+                style={{
+                  backgroundColor: "#EDF2F7",
+                  color: "#A0AEC0",
+                }}
+                className="relative px-9 py-3 rounded-lg button-SystemModulesInfo"
+              >
                 <img
                   src={gear}
                   alt="Corner Image"
@@ -188,10 +200,10 @@ const Button: React.FC<ButtonProps> = ({ text, active, onClick }) => {
   );
 };
 
-const OutsideClickTracker: React.FC<{ onClickOutside: () => void }> = ({
-  children,
-  onClickOutside,
-}) => {
+const OutsideClickTracker: React.FC<{
+  onClickOutside: () => void;
+  children: ReactNode;
+}> = ({ children, onClickOutside }) => {
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       const isOutside = !(event.target as HTMLElement).closest(
