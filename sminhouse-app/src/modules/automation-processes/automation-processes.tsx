@@ -46,7 +46,12 @@ export const AutomationProcesses: React.FC = () => {
           </div>
         </div>
         <div className="rounded-2xl pt-48 lg:p-6 w-full lg:w-2/5 background-container flex flex-col justify-end">
-          <div className="p-5 rounded-2xl bg-gray-200 bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg">
+          <div
+            style={{
+              borderRadius: "14px",
+            }}
+            className="p-5  bg-gray-200 bg-opacity-10 border border-white border-opacity-20 backdrop-blur-lg"
+          >
             <div className="flex justify-between text-white gap-x-4">
               <img className="w-11 lg:w-14" src={logo} alt="" />
               <div className="">

@@ -57,11 +57,14 @@ export const OurProcess: React.FC = () => {
             text="В удобное время производим монтаж оборудования и обучаем работе с ним. Подписываем договор."
             image={third}
           ></SystemSetupCard>
-          <SystemSetupCard
-            title="Настройка системы"
-            text="Запускаем систему и 24 часа в сутки наше предложение будет обеспечивать для вас контроль всех систем дома."
-            image={settings}
-          ></SystemSetupCard>
+          <div className="block md:hidden">
+            <SystemSetupCard
+              title="Настройка системы"
+              text="Запускаем систему и 24 часа в сутки наше предложение будет обеспечивать для вас контроль всех систем дома."
+              image={settings}
+            ></SystemSetupCard>
+          </div>
+
           <SystemSetupCard
             title="Поддержка"
             text="Техническая поддержка оборудования и модулей системы входит в стоимость."
@@ -85,7 +88,7 @@ const SystemSetupCard: React.FC<SystemSetupCardProps> = ({
   image,
 }) => {
   return (
-    <div className="border min-h-64 mb-4 md:mb-0 w-full p-6 md:p-2 lg:p-3 xl:p-5 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between">
+    <div className="border min-h-64 mb-4 md:mb-0 w-full p-6 md:p-2 lg:p-3 xl:px-6 xl:py-8 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between">
       <div className="flex items-center mb-9 md:m-0">
         <img
           className="mr-4 md:mr-1 lg:mr-2 md:w-8 lg:w-15 xl:w-auto"

@@ -12,7 +12,7 @@ export const ReadySolutionsItem: React.FC<ListWithHeaderProps> = ({
   items,
 }) => {
   return (
-    <div className="border p-7 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between">
+    <div className="border px-6 py-8 md:p-8 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between">
       <div>
         <p className="font-bold text-22px md:text-2xl  mb-4">{title}</p>
         <ul className="">

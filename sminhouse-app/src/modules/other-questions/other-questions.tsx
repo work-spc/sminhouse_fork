@@ -30,10 +30,11 @@ export const OtherQuestions: React.FC = () => {
           </button>
         </div>
         <p className="block  text-center text-privacy_policy text-sm md:text-lg">
-          Продолжив, вы соглашаетесь с<span></span>
+          Продолжив, вы соглашаетесь с<span> </span>
           <a className="underline" href="">
             политикой конфиденциальности
           </a>
+          <span> </span>
           ООО “ИНТЕГРОСИСТЕМС”
         </p>
       </div>

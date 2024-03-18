@@ -84,7 +84,6 @@ export const SystemModules: React.FC = () => {
       </div>
       {isMobile ? (
         <div className="md:mt-6 w-full">
-          {" "}
           <Button children="Получить консультацию" type="outline"></Button>
         </div>
       ) : (

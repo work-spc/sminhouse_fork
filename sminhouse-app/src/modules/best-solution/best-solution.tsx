@@ -30,27 +30,20 @@ export const BestSolution: React.FC = () => {
             placeholder="(___) ___-__-__"
           ></InputBestSolution>
           <button
-            className="w-full md:h-16 md:w-1/4  text-white   md:py-5 rounded-lg text-lg md:text-xl bg-accent_background active:bg-button_click hover:bg-button_hover duration-300"
+            className="w-full min-h-14 md:h-16 md:w-1/4  text-white   md:py-5 rounded-lg text-lg md:text-xl bg-accent_background active:bg-button_click hover:bg-button_hover duration-300"
             // onClick={onClick}
           >
-            <div
-              className="text-lg md:text-xl "
-              style={{
-                paddingTop: "14px",
-                paddingBottom: "14px",
-                caretColor: "white",
-                whiteSpace: "nowrap",
-              }}
-            >
+            <div className="text-lg md:text-xl " style={{}}>
               Подобрать решение
             </div>
           </button>
         </div>
         <h3 className="text-center text-privacy_policy text-lg md:text-xl">
-          Продолжив, вы соглашаетесь с <span></span>
+          Продолжив, вы соглашаетесь с<span> </span>
           <a className="underline" href="">
             политикой конфиденциальности
           </a>
+          <span> </span>
           ООО “ИНТЕГРОСИСТЕМС”
         </h3>
       </div>

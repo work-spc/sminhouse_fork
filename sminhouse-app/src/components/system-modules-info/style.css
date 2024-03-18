@@ -1,0 +1,17 @@
+.moduleInDevelopment {
+  border-radius: 16px;
+  border-color: #a1c2d5;
+  z-index: 49;
+  width: 398px;
+  top: -67px;
+  right: -375px;
+}
+
+.moduleInDevelopment-2 {
+  border-radius: 16px;
+  border-color: #a1c2d5;
+  z-index: 30;
+  width: 398px;
+  top: -67px;
+  right: -375px;
+}

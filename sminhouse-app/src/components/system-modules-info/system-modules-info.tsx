@@ -50,6 +50,23 @@ export const SystemModulesInfo: React.FC = () => {
     }
   };
 
+  const [moduleInDevelopment, setModuleInDevelopment] = useState("");
+
+  // Остальной код без изменений...
+
+  const handleGearClick = (moduleName: string) => {
+    if (moduleInDevelopment === moduleName) {
+      // Если текущий модуль уже открыт, закрываем его
+      setModuleInDevelopment("");
+    } else {
+      // Иначе открываем окно для выбранного модуля
+      setModuleInDevelopment(moduleName);
+    }
+  };
+
+  // Остальной код без изменений...
+
+  console.log(moduleInDevelopment);
   return (
     <div className="flex flex-col">
       <div className="flex gap-3 flex-wrap text-lg">
@@ -98,9 +115,22 @@ export const SystemModulesInfo: React.FC = () => {
           <img
             src={gear}
             alt="Corner Image"
-            className="absolute top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
-            // style={{ width: "30px", height: "30px", zIndex: "1" }}
+            className="absolute hidden md:block z-50 top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
+            onClick={() => handleGearClick("Маркетплейс")}
           />
+          {moduleInDevelopment === "Маркетплейс" && (
+            <motion.div
+              key={moduleInDevelopment}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={variants}
+              className="absolute moduleInDevelopment  bg-white px-9 py-4 border  text-light_dark_font"
+            >
+              Модуль "{moduleInDevelopment}" на данный момент находится в
+              разработке
+            </motion.div>
+          )}
           Маркетплейс
         </button>
 
@@ -114,9 +144,22 @@ export const SystemModulesInfo: React.FC = () => {
           <img
             src={gear}
             alt="Corner Image"
-            className="absolute top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
-            // style={{ width: "30px", height: "30px", zIndex: "1" }}
+            className="absolute hidden md:block z-40 top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
+            onClick={() => handleGearClick("Домофония")}
           />
+          {moduleInDevelopment === "Домофония" && (
+            <motion.div
+              key={moduleInDevelopment}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={variants}
+              className="absolute moduleInDevelopment-2 px-9 py-4 bg-white p-4 border text-light_dark_font "
+            >
+              Модуль "{moduleInDevelopment}" на данный момент находится в
+              разработке
+            </motion.div>
+          )}
           Домофония
         </button>
       </div>
