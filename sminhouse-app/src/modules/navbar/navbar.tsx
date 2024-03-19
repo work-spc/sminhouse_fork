@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
       <motion.div
         className="z-30 bg-white bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11 mdpx-11 md:mb-10 py-5 border rounded-2xl"
         initial={{ width: "auto" }}
-        animate={{ height: isOpen ? "100%" : "auto" }}
+        animate={{ height: isOpen ? "auto" : "auto" }}
         transition={{ duration: 0.3 }}
       >
         <div className="flex justify-between items-center">
@@ -80,7 +80,7 @@ export const Navbar: React.FC = () => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="overflow-hidden"
+              className=""
             >
               <ul className="p-4">
                 <MenuItemAnimated>Menu Item 1</MenuItemAnimated>
