@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, ReactNode } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import gear from "../../icons/system-modules/gear.svg";
 import "./style.css";
 
@@ -117,19 +117,21 @@ export const SystemModulesInfo: React.FC = () => {
                   className="absolute hidden md:block z-50 top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
                   onClick={() => handleGearClick("Маркетплейс")}
                 />
-                {moduleInDevelopment === "Маркетплейс" && (
-                  <motion.div
-                    key={moduleInDevelopment}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    variants={variants}
-                    className="absolute moduleInDevelopment1 bg-white px-9 py-4 border  text-light_dark_font"
-                  >
-                    Модуль "{moduleInDevelopment}" на данный момент находится в
-                    разработке
-                  </motion.div>
-                )}
+                <AnimatePresence>
+                  {moduleInDevelopment === "Маркетплейс" && (
+                    <motion.div
+                      key={moduleInDevelopment}
+                      initial="hidden"
+                      animate="visible"
+                      exit="hidden"
+                      variants={variants}
+                      className="absolute moduleInDevelopment1 bg-white px-9 py-4 border  text-light_dark_font"
+                    >
+                      Модуль "{moduleInDevelopment}" на данный момент находится
+                      в разработке
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 Маркетплейс
               </button>
             </div>
@@ -151,19 +153,21 @@ export const SystemModulesInfo: React.FC = () => {
                   className="absolute hidden md:block z-40 top-2 right-2 transform translate-x-1/2 -translate-y-1/2"
                   onClick={() => handleGearClick("Домофония")}
                 />
-                {moduleInDevelopment === "Домофония" && (
-                  <motion.div
-                    key={moduleInDevelopment}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    variants={variants}
-                    className="absolute moduleInDevelopment-2 px-9 py-4 bg-white p-4 border text-light_dark_font "
-                  >
-                    Модуль "{moduleInDevelopment}" на данный момент находится в
-                    разработке
-                  </motion.div>
-                )}
+                <AnimatePresence>
+                  {moduleInDevelopment === "Домофония" && (
+                    <motion.div
+                      key={moduleInDevelopment}
+                      initial="hidden"
+                      animate="visible"
+                      exit="hidden"
+                      variants={variants}
+                      className="absolute moduleInDevelopment-2 px-9 py-4 bg-white p-4 border text-light_dark_font "
+                    >
+                      Модуль "{moduleInDevelopment}" на данный момент находится
+                      в разработке
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 Домофония
               </button>
             </div>
