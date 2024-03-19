@@ -8,12 +8,26 @@
   padding: 0 20px; /* Отступы по бокам */
   box-sizing: border-box; /* Учитываем отступы внутри ширины */
 }
-.menu-container {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease-out;
-}
-
-.menu-container.open {
-  height: 75vh;
+@media (max-width: 1024px) {
+  .navbar-close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* или нужная вам ширина */
+    margin: 0 auto; /* делаем блок по центру горизонтально */
+    padding: 0 20px; /* Отступы по бокам */
+    box-sizing: border-box; /* Учитываем отступы внутри ширины */
+  }
+  .navbar-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* или нужная вам ширина */
+    margin: 0 auto; /* делаем блок по центру горизонтально */
+    padding: 0 20px; /* Отступы по бокам */
+    box-sizing: border-box; /* Учитываем отступы внутри ширины */
+    height: 100vh;
+  }
 }
