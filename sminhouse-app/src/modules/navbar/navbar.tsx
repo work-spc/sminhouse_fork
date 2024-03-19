@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../icons/navbar/logo.svg";
 import button from "../../icons/navbar/button.svg";
+import button_close from "../../icons/navbar/button-close.svg";
 import arrow_input from "../../icons/navbar/arrow-input.svg";
 
 import dzen from "../../icons/footer/Yandex_Zen_logo_icon.svg";
@@ -66,15 +67,30 @@ export const Navbar: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Open menu"
           >
-            <img src={button} alt="Menu" />
+            {isOpen ? (
+              <img
+                src={button_close}
+                alt=""
+                className={`focus:outline-none transform transition-transform ${
+                  isOpen ? "rotate-180" : ""
+                }`}
+              />
+            ) : (
+              <img
+                src={button}
+                alt=""
+                className={`focus:outline-none transform transition-transform ${
+                  isOpen ? "rotate-180" : ""
+                }`}
+              />
+            )}
           </button>
         </div>
-        {/* //ddddddddddd */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
+              animate={{ height: "75vh", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
