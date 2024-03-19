@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../icons/navbar/logo.svg";
 import button from "../../icons/navbar/button.svg";
 import button_close from "../../icons/navbar/button-close.svg";
@@ -18,19 +17,6 @@ interface MenuItemProps {
 
 const MenuItem: React.FC<MenuItemProps> = ({ children }) => {
   return <button className="">{children}</button>;
-};
-
-const MenuItemAnimated: React.FC<MenuItemProps> = ({ children }) => {
-  return (
-    <motion.li
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      <MenuItem>{children}</MenuItem>
-    </motion.li>
-  );
 };
 
 export const Navbar: React.FC = () => {
@@ -86,40 +72,26 @@ export const Navbar: React.FC = () => {
             )}
           </button>
         </div>
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "75vh", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden my-motion-div"
-            >
-              <ul className="text-lg h-full text-center flex flex-col justify-evenly">
-                <MenuItemAnimated>Решения</MenuItemAnimated>
-                <MenuItemAnimated>Проекты</MenuItemAnimated>
-                <MenuItemAnimated>Партнеры</MenuItemAnimated>
-                <MenuItemAnimated>О нас</MenuItemAnimated>
-                {/* <div className="mb-14"></div> */}
-                <hr className="my-4 border-gray_border border-opacity-40 m-0" />
-                <div className="flex gap-2 justify-evenly">
-                  <img className="" src={dzen} alt="" />
-                  <img className="" src={youtube} alt="" />
-                  <img className="" src={vk} alt="" />
-                  <img className="" src={telegram} alt="" />
-                </div>
-                <div className="md:h-1/2  text-center text-base flex flex-col justify-between">
-                  <p className="mb-4 md:mb-0">+7 961 582 02 02</p>
-                  <p>shadow.sochi@gmail.com</p>
-                </div>
-                <Button
-                  children="Получить консультацию"
-                  type="outline"
-                ></Button>
-              </ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div className={`menu-container ${isOpen ? "open" : ""}`}>
+          <ul className="text-lg h-full text-center flex flex-col justify-evenly">
+            <MenuItem>Решения</MenuItem>
+            <MenuItem>Проекты</MenuItem>
+            <MenuItem>Партнеры</MenuItem>
+            <MenuItem>О нас</MenuItem>
+            <hr className="my-4 border-gray_border border-opacity-40 m-0" />
+            <div className="flex gap-2 justify-evenly">
+              <img className="" src={dzen} alt="" />
+              <img className="" src={youtube} alt="" />
+              <img className="" src={vk} alt="" />
+              <img className="" src={telegram} alt="" />
+            </div>
+            <div className="md:h-1/2  text-center text-base flex flex-col justify-between">
+              <p className="mb-4 md:mb-0">+7 961 582 02 02</p>
+              <p>shadow.sochi@gmail.com</p>
+            </div>
+            <Button children="Получить консультацию" type="outline" />
+          </ul>
+        </div>
       </div>
     </div>
   );
