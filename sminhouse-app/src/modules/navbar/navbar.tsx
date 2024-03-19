@@ -76,17 +76,17 @@ export const Navbar: React.FC = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "75vh", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, staggerChildren: 0.1 }}
+              transition={{ duration: 0.3 }}
               className="overflow-hidden"
             >
               <ul className="text-lg h-full text-center flex flex-col justify-evenly">
                 <MenuItemAnimated>Решения</MenuItemAnimated>
                 <MenuItemAnimated>Проекты</MenuItemAnimated>
                 <MenuItemAnimated>Партнеры</MenuItemAnimated>
-                <MenuItemAnimated>О нас</MenuItemAnimated>
+                <MenuItemAnimated>О нас проверка</MenuItemAnimated>
                 {/* <div className="mb-14"></div> */}
                 <hr className="my-4 border-gray_border border-opacity-40 m-0" />
-                <div className="flex gap-2 justify-evenly md:justify-between ">
+                <div className="flex gap-2 justify-evenly">
                   <img className="" src={dzen} alt="" />
                   <img className="" src={youtube} alt="" />
                   <img className="" src={vk} alt="" />
