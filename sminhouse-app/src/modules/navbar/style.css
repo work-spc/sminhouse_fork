@@ -32,6 +32,6 @@
   }
 }
 
-.menu-ul {
-  transition: all 0.05s ease-in-out;
+.my-motion-div {
+  transition: all 0.01s ease-in-out;
 }

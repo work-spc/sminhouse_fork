@@ -17,7 +17,7 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ children }) => {
-  return <div className="menu-ul">{children}</div>;
+  return <button className="">{children}</button>;
 };
 
 const MenuItemAnimated: React.FC<MenuItemProps> = ({ children }) => {
@@ -27,7 +27,6 @@ const MenuItemAnimated: React.FC<MenuItemProps> = ({ children }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="menu-ul"
     >
       <MenuItem>{children}</MenuItem>
     </motion.li>
@@ -94,9 +93,9 @@ export const Navbar: React.FC = () => {
               animate={{ height: "75vh", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="overflow-hidden"
+              className="overflow-hidden my-motion-div"
             >
-              <ul className="text-lg menu-ul h-full text-center flex flex-col justify-evenly">
+              <ul className="text-lg h-full text-center flex flex-col justify-evenly">
                 <MenuItemAnimated>Решения</MenuItemAnimated>
                 <MenuItemAnimated>Проекты</MenuItemAnimated>
                 <MenuItemAnimated>Партнеры</MenuItemAnimated>
