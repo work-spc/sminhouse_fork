@@ -3,18 +3,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../icons/navbar/logo.svg";
 import button from "../../icons/navbar/button.svg";
 import arrow_input from "../../icons/navbar/arrow-input.svg";
+
+import dzen from "../../icons/footer/Yandex_Zen_logo_icon.svg";
+import youtube from "../../icons/footer/youtube.svg";
+import vk from "../../icons/footer/VK.com-logo.svg";
+import telegram from "../../icons/footer/Telegram_2019_Logo 1.svg";
 import "./style.css";
+import { Button } from "../../components/button/button";
 
 interface MenuItemProps {
   children: React.ReactNode;
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ children }) => {
-  return (
-    <button className="border border-transparent hover:border-accent_border focus:outline-none rounded-lg py-2 px-4 hover:text-accent_font transition-colors duration-300 bg-transparent hover:bg-transparent">
-      {children}
-    </button>
-  );
+  return <button className="">{children}</button>;
 };
 
 const MenuItemAnimated: React.FC<MenuItemProps> = ({ children }) => {
@@ -34,13 +36,8 @@ export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="z-30 navbar h-screen p-3 md:pt-6 max-w-1368">
-      <motion.div
-        className="z-30 bg-white bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11 mdpx-11 md:mb-10 py-5 border rounded-2xl"
-        initial={{ width: "auto" }}
-        animate={{ height: isOpen ? "auto" : "auto" }}
-        transition={{ duration: 0.3 }}
-      >
+    <div className="z-30 navbar p-3 lg:pt-6 max-w-1368">
+      <div className="z-30 bg-white lg:bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11 mdpx-11 md:mb-10 py-5 border rounded-2xl">
         <div className="flex justify-between items-center">
           <button>
             <img src={logo} alt="" />
@@ -77,20 +74,37 @@ export const Navbar: React.FC = () => {
           {isOpen && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
+              animate={{ height: "75vh", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className=""
+              transition={{ duration: 0.3, staggerChildren: 0.1 }}
+              className="overflow-hidden"
             >
-              <ul className="p-4">
-                <MenuItemAnimated>Menu Item 1</MenuItemAnimated>
-                <MenuItemAnimated>Menu Item 2</MenuItemAnimated>
-                <MenuItemAnimated>Menu Item 3</MenuItemAnimated>
+              <ul className="text-lg h-full text-center flex flex-col justify-evenly">
+                <MenuItemAnimated>Решения</MenuItemAnimated>
+                <MenuItemAnimated>Проекты</MenuItemAnimated>
+                <MenuItemAnimated>Партнеры</MenuItemAnimated>
+                <MenuItemAnimated>О нас</MenuItemAnimated>
+                {/* <div className="mb-14"></div> */}
+                <hr className="my-4 border-gray_border border-opacity-40 m-0" />
+                <div className="flex gap-2 justify-evenly md:justify-between ">
+                  <img className="" src={dzen} alt="" />
+                  <img className="" src={youtube} alt="" />
+                  <img className="" src={vk} alt="" />
+                  <img className="" src={telegram} alt="" />
+                </div>
+                <div className="md:h-1/2  text-center text-base flex flex-col justify-between">
+                  <p className="mb-4 md:mb-0">+7 961 582 02 02</p>
+                  <p>shadow.sochi@gmail.com</p>
+                </div>
+                <Button
+                  children="Получить консультацию"
+                  type="outline"
+                ></Button>
               </ul>
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.div>
+      </div>
     </div>
   );
 };
