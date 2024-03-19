@@ -1,11 +1,36 @@
 .navbar {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
-  margin: -44px;
+  left: 0;
+  right: 0;
+  width: 100%; /* или нужная вам ширина */
+  margin: 0 auto; /* делаем блок по центру горизонтально */
+  padding: 0 20px; /* Отступы по бокам */
+  box-sizing: border-box; /* Учитываем отступы внутри ширины */
 }
-@media (max-width: 768px) {
-  .navbar {
-    margin: 0; /* Убираем отступ */
+@media (max-width: 1024px) {
+  .navbar-close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* или нужная вам ширина */
+    margin: 0 auto; /* делаем блок по центру горизонтально */
+    padding: 0 20px; /* Отступы по бокам */
+    box-sizing: border-box; /* Учитываем отступы внутри ширины */
   }
+  .navbar-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* или нужная вам ширина */
+    margin: 0 auto; /* делаем блок по центру горизонтально */
+    padding: 0 20px; /* Отступы по бокам */
+    box-sizing: border-box; /* Учитываем отступы внутри ширины */
+    height: 100vh;
+  }
+}
+
+.menu-ul {
 }
