@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
           {isOpen && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "75vh", opacity: 1 }}
+              animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
                 <MenuItemAnimated>Решения</MenuItemAnimated>
                 <MenuItemAnimated>Проекты</MenuItemAnimated>
                 <MenuItemAnimated>Партнеры</MenuItemAnimated>
-                <MenuItemAnimated>О нас проверка</MenuItemAnimated>
+                <MenuItemAnimated>О нас</MenuItemAnimated>
                 {/* <div className="mb-14"></div> */}
                 <hr className="my-4 border-gray_border border-opacity-40 m-0" />
                 <div className="flex gap-2 justify-evenly">
