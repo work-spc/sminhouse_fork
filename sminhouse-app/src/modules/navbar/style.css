@@ -33,4 +33,5 @@
 }
 
 .menu-ul {
+  transition: all 0.05s ease-in-out;
 }
