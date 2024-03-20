@@ -10,8 +10,8 @@ export const AutomationProcesses: React.FC = () => {
         <h2 className="font-bold mb-4 lg:mb-6">Автоматизация процессов</h2>
         <p className="text-lg lg:text-xl text-light_dark_font lg:w-2/3 lg:m-auto">
           SminHOUSE объединяет различные сервисы в одну инфраструктуру, упрощая
-          процессы от передачи счетчиков до управления документами – все
-          доступно в один клик.
+          процессы от передачи показаний счетчиков до управления документами –
+          все доступно в один клик.
         </p>
       </div>
       <div className="flex w-full flex-wrap lg:flex-nowrap gap-9">

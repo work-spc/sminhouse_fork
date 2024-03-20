@@ -1,4 +1,4 @@
-import logo from "../../icons/footer/logo.png";
+import logo from "../../icons/footer/logo.svg";
 import dzen from "../../icons/footer/Yandex_Zen_logo_icon.svg";
 import youtube from "../../icons/footer/youtube.svg";
 import vk from "../../icons/footer/VK.com-logo.svg";

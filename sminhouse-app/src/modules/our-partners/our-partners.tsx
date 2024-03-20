@@ -3,15 +3,16 @@ import "./style.css";
 import { Button } from "../../components/button/button";
 import { OurPartnersItems } from "../../components/our-partners-items/our-partners-items";
 import { WhiteInput } from "../../components/white-input/white-input";
-import first from "../../icons/our-partners/first.svg";
-import third from "../../icons/our-partners/third.svg";
-import second from "../../icons/our-partners/second.svg";
-import sixth from "../../icons/our-partners/sixth.svg";
+import first from "../../icons/our-partners/first.png";
+import third from "../../icons/our-partners/third.png";
+import second from "../../icons/our-partners/second.png";
+import fifth from "../../icons/our-partners/fifth.png";
+import sixth from "../../icons/our-partners/sixth.png";
 
 import first_mobile from "../../icons/our-partners/mobile/first.svg";
 import second_mobile from "../../icons/our-partners/mobile/second.svg";
 import third_mobile from "../../icons/our-partners/mobile/third.svg";
-import fourth_mobile from "../../icons/our-partners/mobile/fourth.svg";
+import fourth_mobile from "../../icons/our-partners/mobile/fourth.png";
 import fifth_mobile from "../../icons/our-partners/mobile/fifth.svg";
 import sixth_mobile from "../../icons/our-partners/mobile/sixth.svg";
 
@@ -39,7 +40,7 @@ export const OurPartners: React.FC = () => {
             children={second}
             position="left"
           ></OurPartnersItems>
-          <OurPartnersItems children={first}></OurPartnersItems>
+          <OurPartnersItems children={fifth}></OurPartnersItems>
           <OurPartnersItems
             children={sixth}
             position="right"

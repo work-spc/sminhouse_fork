@@ -21,7 +21,10 @@ export const ReadyMadeSolutions: React.FC = () => {
       />
 
       <div className="w-full z-10">
-        <h2 className="md:text-center md:text-5xl text-3xl font-bold mb-6 md:mb-9">
+        <h2
+          id="decisions"
+          className="md:text-center md:text-5xl text-3xl font-bold mb-6 md:mb-9"
+        >
           Готовые решения
         </h2>
         <div className="flex flex-wrap md:flex-nowrap gap-y-4 gap-x-9">

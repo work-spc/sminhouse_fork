@@ -12,42 +12,54 @@ import telegram from "../../icons/footer/Telegram_2019_Logo 1.svg";
 import "./style.css";
 import { Button } from "../../components/button/button";
 
-interface MenuItemProps {
-  children: React.ReactNode;
-}
-
-const MenuItem: React.FC<MenuItemProps> = ({ children }) => {
-  return <button className="">{children}</button>;
-};
-
-const MenuItemAnimated: React.FC<MenuItemProps> = ({ children }) => {
-  return (
-    <motion.li
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      <MenuItem>{children}</MenuItem>
-    </motion.li>
-  );
-};
-
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="z-30 navbar p-3 lg:pt-6 max-w-1368">
-      <div className="z-30 bg-white lg:bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11 mdpx-11 md:mb-10 py-5 border rounded-2xl">
+    <div id="navbar" className="z-30 navbar p-3 lg:pt-6 max-w-1368">
+      <div className="z-30 bg-white lg:bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11   py-5 border rounded-2xl">
         <div className="flex justify-between items-center">
           <button>
             <img src={logo} alt="" />
           </button>
           <div className="hidden lg:flex space-x-4">
-            <MenuItem>Решения</MenuItem>
-            <MenuItem>Проекты</MenuItem>
-            <MenuItem>Партнеры</MenuItem>
-            <MenuItem>О нас</MenuItem>
+            <button
+              className="btn"
+              onClick={() => {
+                const element = document.getElementById("decisions");
+                const navbar = document.getElementById("navbar");
+                if (element && navbar) {
+                  const navbarHeight = navbar.offsetHeight; // Получаем высоту навбара
+                  const elementTop =
+                    element.getBoundingClientRect().top + window.pageYOffset; // Получаем позицию верхней границы элемента относительно видимой части окна
+                  window.scrollTo({
+                    top: elementTop - navbarHeight, // Прокручиваем до позиции элемента минус высота навбара
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              Решения
+            </button>
+
+            <button
+              className="btn"
+              onClick={() => {
+                const element = document.getElementById("decisions");
+                const navbar = document.getElementById("navbar");
+                if (element && navbar) {
+                  const navbarHeight = navbar.offsetHeight; // Получаем высоту навбара
+                  const elementTop =
+                    element.getBoundingClientRect().top + window.pageYOffset; // Получаем позицию верхней границы элемента относительно видимой части окна
+                  window.scrollTo({
+                    top: elementTop - navbarHeight, // Прокручиваем до позиции элемента минус высота навбара
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              Решения
+            </button>
           </div>
           <div className="text-accent_font hidden lg:flex">
             <button className="mr-6">+7(800)800-80-80</button>
@@ -96,10 +108,25 @@ export const Navbar: React.FC = () => {
               className="overflow-hidden"
             >
               <ul className="text-lg h-full text-center flex flex-col justify-evenly">
-                <MenuItemAnimated>Решения</MenuItemAnimated>
-                <MenuItemAnimated>Проекты</MenuItemAnimated>
-                <MenuItemAnimated>Партнеры</MenuItemAnimated>
-                <MenuItemAnimated>О нас</MenuItemAnimated>
+                <button
+                  className="btn"
+                  onClick={() => {
+                    const element = document.getElementById("decisions");
+                    const navbar = document.getElementById("navbar");
+                    if (element && navbar) {
+                      const navbarHeight = navbar.offsetHeight; // Получаем высоту навбара
+                      const elementTop =
+                        element.getBoundingClientRect().top + window.scrollY; // Получаем позицию верхней границы элемента относительно видимой части окна
+                      window.scrollTo({
+                        top: elementTop - navbarHeight, // Прокручиваем до позиции элемента минус высота навбара
+                        behavior: "smooth",
+                      });
+                    }
+                  }}
+                >
+                  Решения
+                </button>
+
                 {/* <div className="mb-14"></div> */}
                 <hr className="my-4 border-gray_border border-opacity-40 m-0" />
                 <div className="flex gap-2 justify-evenly">
