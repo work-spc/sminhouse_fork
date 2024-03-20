@@ -68,7 +68,9 @@ export const Navbar: React.FC = () => {
                 if (element && navbar) {
                   const navbarHeight = navbar.offsetHeight; // Получаем высоту навбара
                   const elementTop =
-                    element.getBoundingClientRect().top + window.pageYOffset; // Получаем позицию верхней границы элемента относительно видимой части окна
+                    element.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    70; // Получаем позицию верхней границы элемента относительно видимой части окна
                   window.scrollTo({
                     top: elementTop - navbarHeight, // Прокручиваем до позиции элемента минус высота навбара
                     behavior: "smooth",
@@ -204,20 +206,22 @@ export const Navbar: React.FC = () => {
                   className="btn"
                   onClick={() => {
                     const element = document.getElementById("about_us");
-                    const navbar = document.getElementById("navbar");
-                    if (element && navbar) {
-                      const navbarHeight = 82; // Получаем высоту навбара
-                      const elementRect = element.getBoundingClientRect();
-                      const elementTop = elementRect.top + window.scrollY;
+                    if (element) {
+                      const offset = 100; // Количество пикселей, на которые вы хотите прокрутить выше элемента
+                      const elementTop =
+                        element.getBoundingClientRect().top +
+                        window.pageYOffset -
+                        offset;
                       window.scrollTo({
-                        top: elementTop - navbarHeight - elementRect.height,
+                        top: elementTop,
                         behavior: "smooth",
                       });
                     }
                   }}
                 >
-                  О нас
+                  Решения
                 </button>
+
                 {/* <div className="mb-14"></div> */}
                 <hr className="my-4 border-gray_border border-opacity-40 m-0" />
                 <div className="flex gap-2 justify-evenly">
