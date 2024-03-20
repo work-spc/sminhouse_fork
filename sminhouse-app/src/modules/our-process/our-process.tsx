@@ -7,7 +7,10 @@ import "./style.css";
 
 export const OurProcess: React.FC = () => {
   return (
-    <div className="relative mb-14 md:mb-40 flex flex-col md:flex-row">
+    <div
+      id="about_us"
+      className="relative mb-14 md:mb-40 flex flex-col md:flex-row"
+    >
       <div className="hidden md:block md:relative md:w-1/2">
         <div className="absolute pl-8 pt-9">
           <h2 className=" md:text-white md:text-5xl text-3xl font-bold mb-6 md:mb-2">

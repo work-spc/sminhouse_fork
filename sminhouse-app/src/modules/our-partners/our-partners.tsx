@@ -26,7 +26,10 @@ export const OurPartners: React.FC = () => {
       }}
     >
       <div className="relative z-10 background-best-solutions rounded-2xl md:px-11 md:py-14 px-5 py-11">
-        <h2 className="md:text-center text-white md:text-5xl text-3xl font-bold mb-6 md:mb-11">
+        <h2
+          id="partners"
+          className="md:text-center text-white md:text-5xl text-3xl font-bold mb-6 md:mb-11"
+        >
           Наши партнеры
         </h2>
         <div className="grid-cols-2 hidden md:grid md:grid-cols-3 gap-4 md:gap-9">

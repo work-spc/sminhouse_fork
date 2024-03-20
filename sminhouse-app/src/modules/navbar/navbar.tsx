@@ -45,7 +45,7 @@ export const Navbar: React.FC = () => {
             <button
               className="btn"
               onClick={() => {
-                const element = document.getElementById("decisions");
+                const element = document.getElementById("projects");
                 const navbar = document.getElementById("navbar");
                 if (element && navbar) {
                   const navbarHeight = navbar.offsetHeight; // Получаем высоту навбара
@@ -58,7 +58,43 @@ export const Navbar: React.FC = () => {
                 }
               }}
             >
-              Решения
+              Проекты
+            </button>
+            <button
+              className="btn"
+              onClick={() => {
+                const element = document.getElementById("partners");
+                const navbar = document.getElementById("navbar");
+                if (element && navbar) {
+                  const navbarHeight = navbar.offsetHeight; // Получаем высоту навбара
+                  const elementTop =
+                    element.getBoundingClientRect().top + window.pageYOffset; // Получаем позицию верхней границы элемента относительно видимой части окна
+                  window.scrollTo({
+                    top: elementTop - navbarHeight, // Прокручиваем до позиции элемента минус высота навбара
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              Партнеры
+            </button>
+            <button
+              className="btn"
+              onClick={() => {
+                const element = document.getElementById("about_us");
+                const navbar = document.getElementById("navbar");
+                if (element && navbar) {
+                  const navbarHeight = navbar.offsetHeight; // Получаем высоту навбара
+                  const elementTop =
+                    element.getBoundingClientRect().top + window.pageYOffset; // Получаем позицию верхней границы элемента относительно видимой части окна
+                  window.scrollTo({
+                    top: elementTop - navbarHeight, // Прокручиваем до позиции элемента минус высота навбара
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              О нас
             </button>
           </div>
           <div className="text-accent_font hidden lg:flex">
@@ -114,11 +150,11 @@ export const Navbar: React.FC = () => {
                     const element = document.getElementById("decisions");
                     const navbar = document.getElementById("navbar");
                     if (element && navbar) {
-                      const navbarHeight = navbar.offsetHeight; // Получаем высоту навбара
-                      const elementTop =
-                        element.getBoundingClientRect().top + window.scrollY; // Получаем позицию верхней границы элемента относительно видимой части окна
+                      const navbarHeight = 82; // Получаем высоту навбара
+                      const elementRect = element.getBoundingClientRect();
+                      const elementTop = elementRect.top + window.scrollY;
                       window.scrollTo({
-                        top: elementTop - navbarHeight, // Прокручиваем до позиции элемента минус высота навбара
+                        top: elementTop - navbarHeight - elementRect.height,
                         behavior: "smooth",
                       });
                     }
@@ -126,7 +162,62 @@ export const Navbar: React.FC = () => {
                 >
                   Решения
                 </button>
-
+                <button
+                  className="btn"
+                  onClick={() => {
+                    const element = document.getElementById("projects");
+                    const navbar = document.getElementById("navbar");
+                    if (element && navbar) {
+                      const navbarHeight = 82; // Получаем высоту навбара
+                      const elementRect = element.getBoundingClientRect();
+                      const elementTop = elementRect.top + window.scrollY;
+                      window.scrollTo({
+                        top:
+                          elementTop - navbarHeight - elementRect.height + 30,
+                        behavior: "smooth",
+                      });
+                    }
+                  }}
+                >
+                  Проекты
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => {
+                    const element = document.getElementById("partners");
+                    const navbar = document.getElementById("navbar");
+                    if (element && navbar) {
+                      const navbarHeight = 82; // Получаем высоту навбара
+                      const elementRect = element.getBoundingClientRect();
+                      const elementTop = elementRect.top + window.scrollY;
+                      window.scrollTo({
+                        top:
+                          elementTop - navbarHeight - elementRect.height - 50,
+                        behavior: "smooth",
+                      });
+                    }
+                  }}
+                >
+                  Партнеры
+                </button>
+                <button
+                  className="btn"
+                  onClick={() => {
+                    const element = document.getElementById("about_us");
+                    const navbar = document.getElementById("navbar");
+                    if (element && navbar) {
+                      const navbarHeight = 82; // Получаем высоту навбара
+                      const elementRect = element.getBoundingClientRect();
+                      const elementTop = elementRect.top + window.scrollY;
+                      window.scrollTo({
+                        top: elementTop - navbarHeight - elementRect.height,
+                        behavior: "smooth",
+                      });
+                    }
+                  }}
+                >
+                  О нас
+                </button>
                 {/* <div className="mb-14"></div> */}
                 <hr className="my-4 border-gray_border border-opacity-40 m-0" />
                 <div className="flex gap-2 justify-evenly">
