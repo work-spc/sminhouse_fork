@@ -1,4 +1,5 @@
 .navbar {
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
@@ -8,6 +9,7 @@
   padding: 0 20px; /* Отступы по бокам */
   box-sizing: border-box; /* Учитываем отступы внутри ширины */
 }
+
 @media (max-width: 1024px) {
   .navbar-close {
     position: fixed;

@@ -45,14 +45,17 @@ export const TopSection: React.FC = () => {
           <div>
             <div className="flex gap-x-9">
               <div className="w-1/2 border p-5 grow rounded-2xl bg-white border-gray_border ">
-                <p className="font-bold text-4xl  text-accent_font">
-                  с 2010 года
+                <p className="font-bold mb-2  md:text-4xl  text-accent_font">
+                  <span className="text-3xl">c </span>2010
+                  <span className="text-3xl"> года</span>
                 </p>
                 <p className="text-light_dark_font">занимаемся интеграцией</p>
               </div>
 
               <div className="w-1/2 border p-5 grow rounded-2xl bg-white border-gray_border ">
-                <p className="font-bold text-4xl  text-accent_font">4 000+</p>
+                <p className="font-bold mb-2 text-4xl  text-accent_font">
+                  4 000 +
+                </p>
                 <p className="text-light_dark_font">
                   квартир подключили наши инженеры
                 </p>
@@ -65,8 +68,9 @@ export const TopSection: React.FC = () => {
       {isMobile ? (
         <div className="flex w-full z-10 gap-y-4 mt-9 flex-wrap text-center">
           <div className="w-full border p-5 grow rounded-2xl bg-white border-gray_border ">
-            <p className="font-bold text-32px md:text-4xl text-accent_font">
-              с 2010 года
+            <p className="font-bold text-28px  text-accent_font">
+              <span className="text-22px">c </span>2010
+              <span className="text-22px"> года</span>
             </p>
             <p className="text-light_dark_font text-sm">
               занимаемся интеграцией
@@ -74,8 +78,8 @@ export const TopSection: React.FC = () => {
           </div>
 
           <div className="w-full border p-5 grow rounded-2xl bg-white border-gray_border ">
-            <p className="font-bold text-32px md:text-4xl  text-accent_font">
-              4 000+
+            <p className="font-bold mb-2 text-28px  text-accent_font">
+              4 000 +
             </p>
             <p className="text-light_dark_font text-sm">
               квартир подключили наши инженеры

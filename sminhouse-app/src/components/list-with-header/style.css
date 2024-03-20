@@ -10,12 +10,14 @@
   border-radius: 50%; /* Делаем круг */
   position: absolute;
   left: 0px; /* Расположение слева от текста */
-  top: 50%; /* Выравнивание по вертикали по центру */
-  transform: translateY(-50%); /* Коррекция вертикального положения */
+  top: 0; /* Выравнивание по вертикали по центру */
+  transform: translateY(10px); /* Коррекция вертикального положения */
 }
 @media (max-width: 768px) {
   .circle-text::before {
-    top: 50%; /* Выравнивание по вертикали по центру */
-    transform: translateY(-50%); /* Коррекция вертикального положения */
+    width: 6px;
+    height: 6px;
+    top: 0;
+    transform: translateY(6px); /* Коррекция вертикального положения */
   }
 }

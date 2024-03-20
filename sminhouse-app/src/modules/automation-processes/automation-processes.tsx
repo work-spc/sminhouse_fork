@@ -31,14 +31,14 @@ export const AutomationProcesses: React.FC = () => {
           <div className="flex flex-wrap lg:flex-nowrap gap-y-4 ">
             <div className="border w-full lg:w-2/5 p-6 lg:p-8 grow rounded-2xl border-gray_border bg-white lg:mr-9">
               <p className="font-bold text-2xl mb-4">Удобный доступ</p>
-              <p className="text-light_dark_font mb-3 text-sm lg:text-lg ">
+              <p className="text-light_dark_font text-sm lg:text-lg ">
                 Вы можете пользоваться полным функционалом как с компьютера так
                 и с мобильного приложения
               </p>
             </div>
             <div className="border w-full lg:w-3/5 p-6 lg:p-8 grow rounded-2xl border-gray_border bg-white">
               <p className="font-bold text-2xl mb-4">Система под ключ</p>
-              <p className="text-light_dark_font mb-3 text-sm lg:text-lg ">
+              <p className="text-light_dark_font text-sm lg:text-lg ">
                 Мы самоcтоятельно поставляем, устанавливаем и настраиваем все
                 необходимое оборудование. Полная поддержка по работе системы
               </p>

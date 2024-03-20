@@ -18,7 +18,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children }) => {
   return (
     <div className="bg-white border border-gray_border rounded-2xl mb-2">
       <div
-        className="flex items-center justify-between px-6 pt-6 pb-4 cursor-pointer"
+        className="flex items-center justify-between px-6 pt-6 pb-6 cursor-pointer"
         onClick={toggleAccordion}
       >
         <h2 className="text-lg md:text-2xl mr-4 font-bold text-dark_font">
@@ -43,10 +43,14 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children }) => {
         )}
       </div>
       <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+        initial={{ height: 0, opacity: 0, marginTop: 0 }}
+        animate={{
+          height: isOpen ? "auto" : 0,
+          opacity: isOpen ? 1 : 0,
+          marginTop: isOpen ? "-12px" : 0,
+        }}
         transition={{ duration: 0.3 }}
-        className="overflow-hidden"
+        className="overflow-hidden negative-indentation-accordion"
       >
         <div className="">{children}</div>
       </motion.div>
@@ -56,7 +60,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children }) => {
 
 export const Accordion: React.FC = () => {
   return (
-    <div className="space-y-6 w-full md:w-5/6">
+    <div className="space-y-4 md:space-y-6 w-full md:w-5/6">
       <AccordionItem title="Чем Sminhouse отличается от других подобных систем?">
         <p className="accordion-item text-sm md:text-lg px-6 pb-6">
           SminHOUSE отличается комплексным подходом к организации систем

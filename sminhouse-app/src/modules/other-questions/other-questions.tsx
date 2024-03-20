@@ -6,7 +6,7 @@ export const OtherQuestions: React.FC = () => {
   return (
     <div className="m-auto mb-20 md:mb-40 text-left md:text-center row">
       <div className="justify-between flex-wrap md:flex-wrap  z-1 text-left">
-        <div className="w-full mb-9 text-center">
+        <div className="w-full mb-9 md:text-center">
           <h2 className="md:text-5xl text-3xl font-bold mb-3">
             Остались вопросы?
           </h2>

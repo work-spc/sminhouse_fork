@@ -48,6 +48,12 @@ export default {
             lineHeight: "32px",
           },
         ],
+        "28px": [
+          "28px",
+          {
+            lineHeight: "28px",
+          },
+        ],
         "22px": [
           "22px",
           {

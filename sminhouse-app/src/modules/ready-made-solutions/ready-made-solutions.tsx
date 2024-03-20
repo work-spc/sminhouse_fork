@@ -10,10 +10,11 @@ export const ReadyMadeSolutions: React.FC = () => {
         <img className=" w-56 md:w-auto m-auto z-10" src={phone} alt="" />
       </div>
       <img
-        className="relative hidden md:block z-10 w-56 md:w-2/6"
+        className="relative hidden md:block z-10 w-56 md:w-2/6 custom-shadow"
         src={phone}
         alt=""
       />
+
       <img
         className="z-0 absolute hidden md:block  md:-translate-y-0 md:-translate-x-1/2 "
         src={background}
@@ -30,6 +31,7 @@ export const ReadyMadeSolutions: React.FC = () => {
         <div className="flex flex-wrap md:flex-nowrap gap-y-4 gap-x-9">
           <ReadySolutionsItem
             title="Застройщикам и управляющим компаниям"
+            className="24"
             items={[
               "Повысьте престиж ваших домов, чтобы клиенты выбрали именно вас",
               "Управляйте оплатой и контролируйте дебеторские задолженноси",
@@ -41,6 +43,7 @@ export const ReadyMadeSolutions: React.FC = () => {
           />
           <ReadySolutionsItem
             title="Агенствам недвижимости и собственникам"
+            className="24"
             items={[
               "Контролируйте посещение ваших объектов через систему умных пропусков",
               "Обеспечьте безопасность от протечек, пожара или кражи",

@@ -6,15 +6,16 @@ import { WhiteInput } from "../../components/white-input/white-input";
 import first from "../../icons/our-partners/first.png";
 import third from "../../icons/our-partners/third.png";
 import second from "../../icons/our-partners/second.png";
+import fourth from "../../icons/our-partners/fourth.png";
 import fifth from "../../icons/our-partners/fifth.png";
 import sixth from "../../icons/our-partners/sixth.png";
 
-import first_mobile from "../../icons/our-partners/mobile/first.svg";
-import second_mobile from "../../icons/our-partners/mobile/second.svg";
-import third_mobile from "../../icons/our-partners/mobile/third.svg";
+import first_mobile from "../../icons/our-partners/mobile/first.png";
+import second_mobile from "../../icons/our-partners/mobile/second.png";
+import third_mobile from "../../icons/our-partners/mobile/third.png";
 import fourth_mobile from "../../icons/our-partners/mobile/fourth.png";
-import fifth_mobile from "../../icons/our-partners/mobile/fifth.svg";
-import sixth_mobile from "../../icons/our-partners/mobile/sixth.svg";
+import fifth_mobile from "../../icons/our-partners/mobile/fifth.png";
+import sixth_mobile from "../../icons/our-partners/mobile/sixth.png";
 
 export const OurPartners: React.FC = () => {
   return (
@@ -40,7 +41,7 @@ export const OurPartners: React.FC = () => {
           ></OurPartnersItems>
           <OurPartnersItems children={third}></OurPartnersItems>
           <OurPartnersItems
-            children={second}
+            children={fourth}
             position="left"
           ></OurPartnersItems>
           <OurPartnersItems children={fifth}></OurPartnersItems>
@@ -50,12 +51,30 @@ export const OurPartners: React.FC = () => {
           ></OurPartnersItems>
         </div>
         <div className="grid-cols-2 grid md:hidden md:grid-cols-3 gap-4 md:gap-9">
-          <OurPartnersItems children={first_mobile}></OurPartnersItems>
-          <OurPartnersItems children={second_mobile}></OurPartnersItems>
-          <OurPartnersItems children={third_mobile}></OurPartnersItems>
-          <OurPartnersItems children={fourth_mobile}></OurPartnersItems>
-          <OurPartnersItems children={fifth_mobile}></OurPartnersItems>
-          <OurPartnersItems children={sixth_mobile}></OurPartnersItems>
+          <OurPartnersItems
+            phone={true}
+            children={first_mobile}
+          ></OurPartnersItems>
+          <OurPartnersItems
+            phone={true}
+            children={second_mobile}
+          ></OurPartnersItems>
+          <OurPartnersItems
+            phone={true}
+            children={third_mobile}
+          ></OurPartnersItems>
+          <OurPartnersItems
+            phone={true}
+            children={fourth_mobile}
+          ></OurPartnersItems>
+          <OurPartnersItems
+            phone={true}
+            children={fifth_mobile}
+          ></OurPartnersItems>
+          <OurPartnersItems
+            phone={true}
+            children={sixth_mobile}
+          ></OurPartnersItems>
         </div>
       </div>
       <div className="flex bg-white justify-between flex-wrap md:flex-wrap px-5 pt-16 pb-11 md:px-11 md:pt-20 md:p-14 z-1 margin-partners text-left border rounded-b-2xl border-dark_background ">

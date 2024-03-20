@@ -5,11 +5,13 @@ import { FC } from "react";
 interface OurPartnersItemsProps {
   children?: string;
   position?: string;
+  phone?: boolean;
 }
 
 export const OurPartnersItems: FC<OurPartnersItemsProps> = ({
   children,
   position,
+  phone,
 }) => {
   if (position === "upper") {
     return (
@@ -34,7 +36,11 @@ export const OurPartnersItems: FC<OurPartnersItemsProps> = ({
   }
   return (
     <div className="bg-opacity-0 flex border border-white  min-h-28 md:min-h-36 w-full md:w-full rounded-xl text-xl">
-      <img className="m-auto max-h-36" src={children} alt="" />
+      <img
+        className={`m-auto   ${phone ? "max-h-20" : "max-h-36"}`}
+        src={children}
+        alt=""
+      />
     </div>
   );
 };

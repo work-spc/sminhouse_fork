@@ -1,7 +1,7 @@
 import settings from "../../icons/our-process/settings.svg";
-import second from "../../icons/our-process/second.svg";
-import third from "../../icons/our-process/third.svg";
-import fourth from "../../icons/our-process/fourth.svg";
+import second from "../../icons/our-process/choose.svg";
+import third from "../../icons/our-process/wrench-alt.svg";
+import fourth from "../../icons/our-process/user-headset.svg";
 import background from "../../icons/our-process/background.png";
 import "./style.css";
 
@@ -22,10 +22,10 @@ export const OurProcess: React.FC = () => {
         </div>
 
         <img className="w-full hidden md:block" src={background} alt="" />
-        <div className="our_process md:absolute  bottom-0 right-0 border  p-5 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between ">
-          <div className="flex">
+        <div className="our_process md:absolute  bottom-0 right-0 border  p-6 md:p-2 lg:p-3 xl:px-6 xl:py-8 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between ">
+          <div className="flex items-center mb-9 md:m-0">
             <img
-              className="mr-4 md:mr-1 lg:mr-2 md:w-8 lg:w-15 xl:w-auto img-our-process"
+              className="bg-dark_background mr-4 md:mr-1 lg:mr-2 w-14 md:w-8 lg:w-15 xl:w-16 lg:p-1 xl:p-4 rounded-xl"
               src={settings}
               alt=""
             />
@@ -94,7 +94,7 @@ const SystemSetupCard: React.FC<SystemSetupCardProps> = ({
     <div className="border min-h-64 mb-4 md:mb-0 w-full p-6 md:p-2 lg:p-3 xl:px-6 xl:py-8 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between">
       <div className="flex items-center mb-9 md:m-0">
         <img
-          className="mr-4 md:mr-1 lg:mr-2 md:w-8 lg:w-15 xl:w-auto"
+          className="bg-dark_background mr-4 md:mr-1 lg:mr-2 w-14 md:w-8 lg:w-15 xl:w-16 p-4 md:p-1 lg:p-2 xl:p-4 rounded-xl"
           src={image}
           alt=""
         />

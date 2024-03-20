@@ -23,22 +23,22 @@ export function SwiperMain() {
         keyboard={true}
         // loop={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="w-full mb-8 md:mb-0 md:w-2/5 z-10 "
+        className="w-full overflow-hidden mb-8 md:mb-0 md:w-2/5 z-10 "
       >
         <SwiperSlide className="md:py-12 flex flex-col SwiperSlide-1 items-center justify-center">
           <img className="hidden md:block px-16" src={first} alt="" />
-          <div className="p-6 lock md:hidden flex-grow"></div>
+          <div className="p-4 lock md:hidden flex-grow"></div>
           <img className="block md:hidden" src={first_phone} alt="" />
         </SwiperSlide>
 
         <SwiperSlide className="md:py-12 flex flex-col SwiperSlide-2 items-center justify-center">
           <img className="hidden md:block px-16" src={second} alt="" />
-          <div className="p-6 lock md:hidden flex-grow"></div>
+          <div className="p-4 lock md:hidden flex-grow"></div>
           <img className="block md:hidden" src={first_phone} alt="" />
         </SwiperSlide>
         <SwiperSlide className="md:py-12 flex flex-col SwiperSlide-3 items-center justify-center">
           <img className="hidden md:block px-16" src={third} alt="" />
-          <div className="p-6 lock md:hidden flex-grow"></div>
+          <div className="p-4 lock md:hidden flex-grow"></div>
           <img className="block md:hidden" src={first_phone} alt="" />
         </SwiperSlide>
       </Swiper>

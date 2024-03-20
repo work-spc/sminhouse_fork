@@ -34,8 +34,6 @@ export const SystemModulesInfo: React.FC = () => {
     text5: "Обеспечивает безопасность и контроль доступа в жилом комплексе",
     text6:
       "Позволяет контролировать ситуацию в жилом комплексе в режиме реального времени",
-    text7:
-      "Единая учетная запись для управления объектами в разных жилых комплексах",
   };
 
   useEffect(() => {
@@ -63,53 +61,50 @@ export const SystemModulesInfo: React.FC = () => {
   return (
     <div className="flex flex-col">
       <div className="flex gap-3 flex-wrap text-lg">
-        <Button
-          text={"Заявки"}
-          active={activeButton === buttonTexts.text1}
-          onClick={() => handleButtonClick(buttonTexts.text1)}
-        />
-        <Button
-          text={"Чат"}
-          active={activeButton === buttonTexts.text2}
-          onClick={() => handleButtonClick(buttonTexts.text2)}
-        />
-        <Button
-          text={"Уведомления"}
-          active={activeButton === buttonTexts.text3}
-          onClick={() => handleButtonClick(buttonTexts.text3)}
-        />
-        <Button
-          text={"ЖКХ"}
-          active={activeButton === buttonTexts.text4}
-          onClick={() => handleButtonClick(buttonTexts.text4)}
-        />
-        <Button
-          text={"СКУД"}
-          active={activeButton === buttonTexts.text5}
-          onClick={() => handleButtonClick(buttonTexts.text5)}
-        />
-        <Button
-          text={"Видеонаблюдение"}
-          active={activeButton === buttonTexts.text6}
-          onClick={() => handleButtonClick(buttonTexts.text6)}
-        />
-        <Button
-          text={"Zero"}
-          active={activeButton === buttonTexts.text7}
-          onClick={() => handleButtonClick(buttonTexts.text7)}
-        />
+        {/* вввввввввввввввв */}
         <OutsideClickTracker onClickOutside={() => setModuleInDevelopment("")}>
-          <div className="flex flex-wrap gap-3">
+          <div className="">
             <div
-              className="moduleInDevelopment"
+              className=" flex flex-wrap gap-3"
               ref={(ref) => (excludedBlocksRef.current[0] = ref)}
             >
+              {" "}
+              <Button
+                text={"Заявки"}
+                active={activeButton === buttonTexts.text1}
+                onClick={() => handleButtonClick(buttonTexts.text1)}
+              />
+              <Button
+                text={"Чат"}
+                active={activeButton === buttonTexts.text2}
+                onClick={() => handleButtonClick(buttonTexts.text2)}
+              />
+              <Button
+                text={"Уведомления"}
+                active={activeButton === buttonTexts.text3}
+                onClick={() => handleButtonClick(buttonTexts.text3)}
+              />
+              <Button
+                text={"ЖКХ"}
+                active={activeButton === buttonTexts.text4}
+                onClick={() => handleButtonClick(buttonTexts.text4)}
+              />
+              <Button
+                text={"СКУД"}
+                active={activeButton === buttonTexts.text5}
+                onClick={() => handleButtonClick(buttonTexts.text5)}
+              />
+              <Button
+                text={"Видеонаблюдение"}
+                active={activeButton === buttonTexts.text6}
+                onClick={() => handleButtonClick(buttonTexts.text6)}
+              />
               <button
                 style={{
                   backgroundColor: "#EDF2F7",
                   color: "#A0AEC0",
                 }}
-                className="relative px-9 py-3 rounded-lg button-SystemModulesInfo"
+                className="relative md:px-9 md:py-3 py-2.5 px-6 rounded-lg button-SystemModulesInfo"
               >
                 <img
                   src={gear}
@@ -134,18 +129,12 @@ export const SystemModulesInfo: React.FC = () => {
                 </AnimatePresence>
                 Маркетплейс
               </button>
-            </div>
-
-            <div
-              className="moduleInDevelopment"
-              ref={(ref) => (excludedBlocksRef.current[1] = ref)}
-            >
               <button
                 style={{
                   backgroundColor: "#EDF2F7",
                   color: "#A0AEC0",
                 }}
-                className="relative px-9 py-3 rounded-lg button-SystemModulesInfo"
+                className="relative md:px-9 md:py-3 py-2.5 px-6 rounded-lg button-SystemModulesInfo"
               >
                 <img
                   src={gear}
@@ -171,6 +160,11 @@ export const SystemModulesInfo: React.FC = () => {
                 Домофония
               </button>
             </div>
+
+            {/* <div
+              className="moduleInDevelopment"
+              ref={(ref) => (excludedBlocksRef.current[1] = ref)}
+            ></div> */}
           </div>
         </OutsideClickTracker>
       </div>
@@ -190,8 +184,8 @@ export const SystemModulesInfo: React.FC = () => {
 
 const Button: React.FC<ButtonProps> = ({ text, active, onClick }) => {
   const buttonClass = active
-    ? "px-9 py-3 rounded-lg text-white bg-accent_background transition-all duration-200"
-    : "px-9 py-3 rounded-lg bg-gray_background hover:bg-button_modules_info_hover transition-all duration-200";
+    ? "md:px-9 md:py-3 py-2.5 px-6 rounded-lg text-white bg-accent_background transition-all duration-200"
+    : "md:px-9 md:py-3 py-2.5 px-6 rounded-lg bg-gray_background hover:bg-button_modules_info_hover transition-all duration-200";
   return (
     <motion.button
       className={buttonClass}
