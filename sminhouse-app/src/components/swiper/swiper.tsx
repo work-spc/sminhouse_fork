@@ -2,8 +2,6 @@ import first from "../../icons/swiper-main/phone-first.png";
 import second from "../../icons/swiper-main/phone-second.png";
 import third from "../../icons/swiper-main/phone-third.png";
 import first_phone from "../../icons/swiper-main/first_phone.png";
-import second_phone from "../../icons/swiper-main/slide-second.png";
-import third_phone from "../../icons/swiper-main/slide-third.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
