@@ -18,6 +18,8 @@ export default {
         light_accent_font: "#0BC5EA",
         accent_border: "#0BC5EA",
         gray_border: "RGBA(19, 103, 150, 0.4)",
+        dark_gradient_from: "#39475C",
+        dark_gradient_to: "#576E90",
         dark_background: "#42526B",
         gray_background: "#EDF2F7",
         main_background: "#F9FBFC",

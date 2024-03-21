@@ -11,6 +11,7 @@ import { FrequentlyAskedQuestions } from "../modules/frequently-asked-questions/
 import { OtherQuestions } from "../modules/other-questions/other-questions";
 import { Footer } from "../modules/footer/footer";
 import { SecuritySystems } from "../modules/security-systems/security-systems";
+import { ModalWindow } from "../components/modal-window/modal-window";
 
 export const HomePage: React.FC = () => {
   return (
