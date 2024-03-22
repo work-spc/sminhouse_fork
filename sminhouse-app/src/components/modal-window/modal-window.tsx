@@ -32,7 +32,7 @@ export const ModalWindow = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[1000] p-5  flex items-center justify-center bg-gray-800 bg-opacity-50"
+          className="fixed inset-0 z-[1000] md:p-5  flex items-end md:items-center justify-center bg-gray-800 bg-opacity-50"
           onClick={handleBackdropClick}
         >
           <motion.div
@@ -40,7 +40,7 @@ export const ModalWindow = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="flex bg-gradient-to-r overflow-hidden from-dark_gradient_from to-dark_gradient_to max-w-1280 rounded-2xl shadow-md "
+            className="flex bg-dark_background md:bg-gradient-to-r overflow-hidden md:from-dark_gradient_from md:to-dark_gradient_to max-w-1280 rounded-t-2xl md:rounded-2xl shadow-md "
           >
             <div className="px-5 py-11 lg:px-11 lg:py-14 lg:w-1/2">
               <h2 className=" text-white md:text-[46px] text-3xl font-bold mb-6 md:mb-3">
@@ -84,15 +84,16 @@ export const ModalWindow = () => {
                     </div>
                   </button>
                 </div>
+                <h3 className="block lg:hidden text-privacy_policy text-sm md:text-lg">
+                  Продолжив, вы соглашаетесь с<span> </span>
+                  <a className="underline" href="">
+                    политикой конфиденциальности
+                  </a>
+                  <span> </span>
+                  ООО “ИНТЕГРОСИСТЕМС”
+                </h3>
               </div>
-              <h3 className="block lg:hidden text-privacy_policy text-sm md:text-lg">
-                Продолжив, вы соглашаетесь с<span> </span>
-                <a className="underline" href="">
-                  политикой конфиденциальности
-                </a>
-                <span> </span>
-                ООО “ИНТЕГРОСИСТЕМС”
-              </h3>
+
               {/* <button
                 className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
                 onClick={handleClose}
