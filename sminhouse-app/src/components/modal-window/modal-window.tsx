@@ -42,8 +42,8 @@ export const ModalWindow = () => {
             transition={{ duration: 0.3 }}
             className="flex bg-gradient-to-r overflow-hidden from-dark_gradient_from to-dark_gradient_to max-w-1280 rounded-2xl shadow-md "
           >
-            <div className=" px-11 py-14 w-1/2">
-              <h2 className=" text-white md:text-5xl text-3xl font-bold mb-6 md:mb-3">
+            <div className="px-5 py-11 lg:px-11 lg:py-14 lg:w-1/2">
+              <h2 className=" text-white md:text-[46px] text-3xl font-bold mb-6 md:mb-3">
                 Получите демо-версию
               </h2>
               <p className="mb-9 text-xl font-medium  text-white  ">
@@ -66,7 +66,7 @@ export const ModalWindow = () => {
                   placeholder="(___) ___-__-__"
                   w_full={true}
                 ></InputBestSolution>
-                <h3 className=" text-privacy_policy text-sm md:text-lg">
+                <h3 className="hidden lg:block text-privacy_policy text-sm md:text-lg">
                   Продолжив, вы соглашаетесь с<span> </span>
                   <a className="underline" href="">
                     политикой конфиденциальности
@@ -76,7 +76,7 @@ export const ModalWindow = () => {
                 </h3>
                 <div>
                   <button
-                    className="w-auto px-16 min-h-14 md:h-16 text-white  md:py-5 rounded-lg text-lg md:text-xl bg-accent_background active:bg-button_click hover:bg-button_hover duration-300"
+                    className="w-full lg:w-auto px-16 min-h-14 md:h-16 text-white  md:py-5 rounded-lg text-lg md:text-xl bg-accent_background active:bg-button_click hover:bg-button_hover duration-300"
                     // onClick={onClick}
                   >
                     <div className="text-lg md:text-xl " style={{}}>
@@ -85,6 +85,14 @@ export const ModalWindow = () => {
                   </button>
                 </div>
               </div>
+              <h3 className="block lg:hidden text-privacy_policy text-sm md:text-lg">
+                Продолжив, вы соглашаетесь с<span> </span>
+                <a className="underline" href="">
+                  политикой конфиденциальности
+                </a>
+                <span> </span>
+                ООО “ИНТЕГРОСИСТЕМС”
+              </h3>
               {/* <button
                 className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
                 onClick={handleClose}
@@ -92,7 +100,7 @@ export const ModalWindow = () => {
                 Close
               </button> */}
             </div>
-            <div className="w-1/2 flex ">
+            <div className="w-1/2 hidden lg:flex">
               <img
                 src={first}
                 alt=""
