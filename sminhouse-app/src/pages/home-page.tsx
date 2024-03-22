@@ -15,8 +15,8 @@ import { SecuritySystems } from "../modules/security-systems/security-systems";
 
 export const HomePage: React.FC = () => {
   return (
-    <div className="">
-      <div className="">
+    <div className="font-sans font-medium text-dark_font bg-main_background px-5 md:px-9 md:py-6 ">
+      <div className="max-w-1368 p-0 md:px-11 m-auto">
         <Navbar></Navbar>
         <TopSection></TopSection>
         <AutomationProcesses></AutomationProcesses>

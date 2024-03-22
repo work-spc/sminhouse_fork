@@ -16,8 +16,8 @@ export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div id="navbar" className="navbar lg:pt-6 max-w-1368">
-      <div className="z-30 bg-white lg:bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11 py-5 border rounded-2xl">
+    <div id="navbar" className="navbar p-3 lg:pt-6 max-w-1368">
+      <div className="z-30 bg-white lg:bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11   py-5 border rounded-2xl">
         <div className="flex justify-between items-center">
           <button>
             <img src={logo} alt="" />
