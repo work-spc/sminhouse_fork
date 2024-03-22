@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 import { closeModalWindow } from "../../state/chosen-сomponents/is-open-modal-window";
 
-import phone from "../../icons/modal-window/Group 427320728.png";
+import first from "../../icons/modal-window/first.png";
+import second from "../../icons/modal-window/second.png";
+import InputBestSolution from "../best-solution-input/best-solution-input";
 
 export const ModalWindow = () => {
   const isOpen = useSelector(
@@ -30,7 +32,7 @@ export const ModalWindow = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50"
+          className="fixed inset-0 z-[1000] p-5  flex items-center justify-center bg-gray-800 bg-opacity-50"
           onClick={handleBackdropClick}
         >
           <motion.div
@@ -38,28 +40,69 @@ export const ModalWindow = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="flex bg-gradient-to-r from-dark_gradient_from to-dark_gradient_to max-w-1280 rounded-2xl shadow-md "
+            className="flex bg-gradient-to-r overflow-hidden from-dark_gradient_from to-dark_gradient_to max-w-1280 rounded-2xl shadow-md "
           >
             <div className=" px-11 py-14 w-1/2">
               <h2 className=" text-white md:text-5xl text-3xl font-bold mb-6 md:mb-3">
                 Получите демо-версию
               </h2>
-              <p className="text-xl font-medium  text-white  ">
+              <p className="mb-9 text-xl font-medium  text-white  ">
                 Наш менеджер свяжется с вами в ближайшее время для обсуждения
                 подробностей предоставления демо-версии
               </p>
-            </div>
-            <div className="w-1/2">
-              {" "}
-              <div>
-                <img src={phone} alt="" />
+              <div className="flex flex-col gap-6 flex-wrap md:flex-nowrap ">
+                <InputBestSolution
+                  type="text"
+                  placeholder="Имя*"
+                  w_full={true}
+                ></InputBestSolution>
+                <InputBestSolution
+                  type="mail"
+                  placeholder="E-mail*"
+                  w_full={true}
+                ></InputBestSolution>
+                <InputBestSolution
+                  type="tel"
+                  placeholder="(___) ___-__-__"
+                  w_full={true}
+                ></InputBestSolution>
+                <h3 className=" text-privacy_policy text-sm md:text-lg">
+                  Продолжив, вы соглашаетесь с<span> </span>
+                  <a className="underline" href="">
+                    политикой конфиденциальности
+                  </a>
+                  <span> </span>
+                  ООО “ИНТЕГРОСИСТЕМС”
+                </h3>
+                <div>
+                  <button
+                    className="w-auto px-16 min-h-14 md:h-16 text-white  md:py-5 rounded-lg text-lg md:text-xl bg-accent_background active:bg-button_click hover:bg-button_hover duration-300"
+                    // onClick={onClick}
+                  >
+                    <div className="text-lg md:text-xl " style={{}}>
+                      Получить демо
+                    </div>
+                  </button>
+                </div>
               </div>
-              <button
+              {/* <button
                 className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
                 onClick={handleClose}
               >
                 Close
-              </button>
+              </button> */}
+            </div>
+            <div className="w-1/2 flex ">
+              <img
+                src={first}
+                alt=""
+                className="z-10 max-h-[666px] scale-[1.1] translate-x-[30px] translate-y-[100px] w-auto"
+              />
+              <img
+                src={second}
+                alt=""
+                className="max-h-[666px] scale-[1.1]  translate-x-[-100px] translate-y-[160px]"
+              />
             </div>
           </motion.div>
         </motion.div>

@@ -3,15 +3,21 @@ import ru from "../../icons/best-solution/RU.svg";
 interface UniversalInputProps {
   type: string;
   placeholder: string;
+  w_full?: boolean;
 }
 
 const InputBestSolution: React.FC<UniversalInputProps> = ({
   type,
   placeholder,
+  w_full,
 }) => {
   if (type === "tel") {
     return (
-      <div className="relative h-14  md:min-h-16 w-full md:w-1/4">
+      <div
+        className={`relative h-14  md:min-h-16 w-full ${
+          w_full ? "md:w-full" : "md:w-1/4"
+        }`}
+      >
         <img
           className="absolute top-1/2 transform -translate-y-1/2 ml-5"
           src={ru}
@@ -30,7 +36,11 @@ const InputBestSolution: React.FC<UniversalInputProps> = ({
     );
   }
   return (
-    <div className="relative h-14 md:min-h-16 w-full md:w-1/4">
+    <div
+      className={`relative h-14  md:min-h-16 w-full ${
+        w_full ? "md:w-full" : "md:w-1/4"
+      }`}
+    >
       <input
         type={type}
         placeholder={placeholder}
