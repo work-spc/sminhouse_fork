@@ -95,7 +95,7 @@ export const ModalWindow = () => {
                     </div>
                   </button>
                 </div>
-                <h3 className="block lg:hidden text-privacy_policy text-sm md:text-lg">
+                <h3 className="text-center block lg:hidden text-privacy_policy text-sm md:text-lg">
                   Продолжив, вы соглашаетесь с<span> </span>
                   <a className="underline" href="">
                     политикой конфиденциальности
