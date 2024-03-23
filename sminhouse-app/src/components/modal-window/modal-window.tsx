@@ -37,9 +37,9 @@ export const ModalWindow = () => {
           onClick={handleBackdropClick}
         >
           <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="flex bg-dark_background md:bg-gradient-to-r overflow-hidden md:from-dark_gradient_from md:to-dark_gradient_to max-w-1280 rounded-t-2xl md:rounded-2xl shadow-md "
           >
