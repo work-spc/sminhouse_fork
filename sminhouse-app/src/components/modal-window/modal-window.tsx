@@ -17,12 +17,17 @@ export const ModalWindow = () => {
 
   const handleClose = () => {
     dispatch(closeModalWindow());
+    document.body.classList.remove("overflow-hidden"); // Удаление класса для включения прокрутки
   };
 
   const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
       handleClose();
     }
+  };
+
+  const handleOpen = () => {
+    document.body.classList.add("overflow-hidden"); // Добавление класса для отключения прокрутки
   };
 
   return (
@@ -35,6 +40,7 @@ export const ModalWindow = () => {
           transition={{ duration: 0.3 }}
           className="fixed inset-0 z-[1000] md:p-5  flex items-end md:items-center justify-center bg-gray-800 bg-opacity-50"
           onClick={handleBackdropClick}
+          onLoad={handleOpen} // Добавляем обработчик для отключения прокрутки при открытии модального окна
         >
           <motion.div
             initial={{ opacity: 0 }}
