@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 import { closeModalWindow } from "../../state/chosen-сomponents/is-open-modal-window";
 
+import button_close from "../../icons/modal-window/button-close.svg";
 import first from "../../icons/modal-window/first.png";
 import second from "../../icons/modal-window/second.png";
 import InputBestSolution from "../best-solution-input/best-solution-input";
@@ -43,13 +44,23 @@ export const ModalWindow = () => {
             className="flex bg-dark_background md:bg-gradient-to-r overflow-hidden md:from-dark_gradient_from md:to-dark_gradient_to max-w-1280 rounded-t-2xl md:rounded-2xl shadow-md "
           >
             <div className="px-5 py-11 lg:px-11 lg:py-14 lg:w-1/2">
-              <h2 className=" text-white md:text-[46px] text-3xl font-bold mb-6 md:mb-3">
-                Получите демо-версию
-              </h2>
-              <p className="mb-9 text-xl font-medium  text-white  ">
-                Наш менеджер свяжется с вами в ближайшее время для обсуждения
-                подробностей предоставления демо-версии
-              </p>
+              <div className="flex">
+                <div>
+                  <h2 className=" text-white md:text-[46px] text-3xl font-bold mb-6 md:mb-3">
+                    Получите демо-версию
+                  </h2>
+                  <p className="mb-9 text-xl font-medium  text-white  ">
+                    Наш менеджер свяжется с вами в ближайшее время для
+                    обсуждения подробностей предоставления демо-версии
+                  </p>
+                </div>
+                <div>
+                  <button className="w-6" onClick={handleClose}>
+                    <img className="w-6" src={button_close} alt="" />
+                  </button>
+                </div>
+              </div>
+
               <div className="flex flex-col gap-6 flex-wrap md:flex-nowrap ">
                 <InputBestSolution
                   type="text"
@@ -93,15 +104,14 @@ export const ModalWindow = () => {
                   ООО “ИНТЕГРОСИСТЕМС”
                 </h3>
               </div>
-
-              {/* <button
-                className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
+            </div>
+            <div className="relative w-1/2 hidden lg:flex">
+              <button
+                className="absolute right-0 bg-white bg-opacity-10 md:mt-6 md:mr-9 p-3 text-white rounded-full"
                 onClick={handleClose}
               >
-                Close
-              </button> */}
-            </div>
-            <div className="w-1/2 hidden lg:flex">
+                <img src={button_close} alt="" />
+              </button>
               <img
                 src={first}
                 alt=""
