@@ -54,7 +54,7 @@ export const ModalWindow = () => {
                     обсуждения подробностей предоставления демо-версии
                   </p>
                 </div>
-                <div className="lg:hidden">
+                <div className="lg:hidden pt-2">
                   <button className="w-6" onClick={handleClose}>
                     <img className="w-6" src={button_close} alt="" />
                   </button>
