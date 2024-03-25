@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Button } from "../../components/button/button";
 import { SwiperMain } from "../../components/swiper/swiper";
 import "./style.css";
-import { ModalWindow } from "../../components/modal-window/modal-window";
 import { useDispatch } from "react-redux";
 import { openModalWindow } from "../../state/chosen-сomponents/is-open-modal-window";
 
