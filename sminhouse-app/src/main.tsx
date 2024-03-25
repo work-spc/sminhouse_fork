@@ -5,6 +5,7 @@ import "./index.css";
 import { store } from "./state/store.ts";
 import { Provider } from "react-redux";
 import SmoothScroll from "./components/smooth-scroll/smooth-scroll.tsx";
+import { ModalWindow } from "./components/modal-window/modal-window.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <SmoothScroll>
         <App />
       </SmoothScroll>
+      <ModalWindow></ModalWindow>
     </Provider>
   </React.StrictMode>
 );

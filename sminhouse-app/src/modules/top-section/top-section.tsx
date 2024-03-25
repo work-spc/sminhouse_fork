@@ -23,8 +23,6 @@ export const TopSection: React.FC = () => {
 
   return (
     <div className="m-auto mb-20 md:mt-28 md:mb-40 pt-28 md:pt-0 flex md:flex-nowrap flex-wrap gap-x-9 ">
-      <ModalWindow></ModalWindow>
-
       <div className="w-full flex flex-col z-10 md:w-3/5">
         <h1 className="font-bold pt-6 md:text-6xl text-4xl mb-11 md:mb-0">
           <span className="paragraph_h1">Универсальная система</span>

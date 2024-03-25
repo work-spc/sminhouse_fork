@@ -38,7 +38,7 @@ export const ModalWindow = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[1000] md:p-5 h-screen flex items-end md:items-center justify-center bg-gray-800 bg-opacity-50"
+          className="fixed inset-0 z-[1000] md:p-5  flex items-end md:items-center justify-center bg-gray-800 bg-opacity-50"
           onClick={handleBackdropClick}
           onLoad={handleOpen} // Добавляем обработчик для отключения прокрутки при открытии модального окна
         >
