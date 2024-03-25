@@ -15,6 +15,11 @@ import { Button } from "../../components/button/button";
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const handleButtonClick = () => {
+    const url = "https://my.sminhouse.ru/login";
+    window.location.assign(url);
+  };
+
   return (
     <div id="navbar" className="navbar p-3 lg:pt-6 max-w-1368">
       <div className="z-30 bg-white lg:bg-opacity-80 backdrop-blur-sm m-auto p-4 md:px-11  py-5 border rounded-2xl">
@@ -107,8 +112,10 @@ export const Navbar: React.FC = () => {
                 paddingBottom: "11px",
               }}
               className="border-button-half flex px-6 items-center rounded-lg border-accent_border hover:bg-accent_background hover:bg-opacity-10 duration-300"
+              onClick={handleButtonClick} // Добавляем обработчик события onClick
             >
               <p className="mr-3">Войти</p>
+              {/* Предполагается, что arrow_input - это путь к изображению стрелки */}
               <img src={arrow_input} alt="" />
             </button>
           </div>
