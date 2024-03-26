@@ -3,3 +3,20 @@
   background-size: cover;
   background-position: center;
 }
+.button-automation-processes {
+  width: 40px;
+  background: url("../../icons/automation-processes/round-button.svg");
+  transition: background 0.2s ease-in-out;
+}
+
+@media (hover: hover) {
+  .button-automation-processes:hover {
+    background: url("../../icons/automation-processes/round-button-hover.svg");
+  }
+}
+@media (hover: none) {
+  .button-automation-processes:active {
+    transition: none;
+    background: url("../../icons/automation-processes/round-button-hover.svg");
+  }
+}

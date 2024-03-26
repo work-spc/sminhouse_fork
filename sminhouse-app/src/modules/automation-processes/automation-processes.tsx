@@ -1,6 +1,5 @@
 import { ListWithHeader } from "../../components/list-with-header/list-with-header";
 import logo from "../../icons/automation-processes/logo.svg";
-import button from "../../icons/automation-processes/round-button.svg";
 import "./style.css";
 
 export const AutomationProcesses: React.FC = () => {
@@ -65,7 +64,11 @@ export const AutomationProcesses: React.FC = () => {
                   </span>
                 </p>
               </div>
-              <img className="w-10" src={button} alt="" />
+              <div className="flex align-center">
+                <button className="w-10">
+                  <div className="w-10 h-10 button-automation-processes"></div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
