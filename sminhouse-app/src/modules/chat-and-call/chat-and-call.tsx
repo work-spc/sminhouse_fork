@@ -14,7 +14,7 @@ export const ChatAndCall: React.FC = () => {
   };
 
   return (
-    <div className="fixed z-[999] bottom-12 right-8 md:bottom-24 md:right-14 flex flex-col items-center  ">
+    <div className="fixed z-[999] bottom-16 right-8 md:bottom-24 md:right-14 flex flex-col items-center  ">
       <AnimatePresence>
         {isVisible && (
           <motion.div
@@ -49,7 +49,7 @@ export const ChatAndCall: React.FC = () => {
                 />
               </motion.div>
             ) : (
-              <motion.div className="button-ChatAndCall md:h-16 md:w-16 bg-white flex p-[17px] md:p-[19px] rounded-full border-[1.5px] border-accent_background ">
+              <motion.div className="button-ChatAndCall_main md:h-16 md:w-16 bg-white flex p-[17px] md:p-[19px] rounded-full border-[1.5px] border-accent_background ">
                 <motion.img
                   src={chat}
                   alt="chat"

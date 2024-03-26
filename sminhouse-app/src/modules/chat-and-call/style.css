@@ -9,11 +9,19 @@
     transition-duration: 200ms; /* продолжительность анимации в миллисекундах */
     background-color: #cef3fb; /* цвет фона при наведении */
   }
+  .button-ChatAndCall_main:hover {
+    transition-property: background-color; /* применять анимацию только к цвету фона */
+    transition-duration: 200ms; /* продолжительность анимации в миллисекундах */
+    background-color: #cef3fb; /* цвет фона при наведении */
+  }
 }
 @media (hover: none) {
   .button-ChatAndCall:active {
     transition-property: background-color; /* применять анимацию только к цвету фона */
     transition-duration: 200ms; /* продолжительность анимации в миллисекундах */
     background-color: #cef3fb; /* цвет фона при наведении */
+  }
+  .button-ChatAndCall_main:active {
+    background-color: #fff; /* цвет фона при наведении */
   }
 }
