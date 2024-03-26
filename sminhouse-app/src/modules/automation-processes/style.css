@@ -6,7 +6,7 @@
 .button-automation-processes {
   width: 40px;
   background: url("../../icons/automation-processes/round-button.svg");
-  transition: background 0.2s ease-in-out;
+  transition: background 0.1s ease-in-out;
 }
 
 @media (hover: hover) {
