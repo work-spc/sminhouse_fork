@@ -4,6 +4,7 @@ import { SwiperMain } from "../../components/swiper/swiper";
 import "./style.css";
 import { useDispatch } from "react-redux";
 import { openModalWindow } from "../../state/chosen-сomponents/is-open-modal-window";
+import { DownloadButton } from "../../components/download-button/download-button";
 
 export const TopSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -35,7 +36,7 @@ export const TopSection: React.FC = () => {
         </h2>
         <div className="flex gap-x-6 mb-11 text-lg flex-wrap md:flex-nowrap">
           <div className="w-full md:w-auto mb-3 md:m-0 ">
-            <Button children="Скачать презентацию"></Button>
+            <DownloadButton></DownloadButton>
           </div>
           <div
             onClick={() => dispatch(openModalWindow())}
