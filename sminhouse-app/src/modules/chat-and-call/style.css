@@ -1,3 +1,8 @@
+.button-ChatAndCall {
+  box-shadow: 0px 6px 11px 4px #05445012;
+  box-shadow: 0px 2px 3px 0px #0544500d;
+}
+
 @media (hover: hover) {
   .button-ChatAndCall:hover {
     transition-property: background-color; /* применять анимацию только к цвету фона */
