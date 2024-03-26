@@ -25,20 +25,10 @@ export const ChatAndCall: React.FC = () => {
             className="mb-[2px]"
           >
             <div className="p-[18px] cursor-pointer mb-4 bg-white rounded-full border-2 border-accent_background hover:bg-[#CEF3FB] transition-colors duration-200">
-              <img
-                className="w-6"
-                src={chat_questions}
-                alt={"чат"}
-                key="chat_questions"
-              />
+              <img className="w-6" src={phone_call} alt={"звоток"} />
             </div>
             <div className="p-[18px] cursor-pointer rounded-full bg-white border-2 border-accent_background hover:bg-[#CEF3FB] transition-colors duration-200">
-              <img
-                className="w-6"
-                src={phone_call}
-                alt={"звоток"}
-                key="phone_call"
-              />
+              <img className="w-6" src={chat_questions} alt={"чат"} />
             </div>
           </motion.div>
         )}
