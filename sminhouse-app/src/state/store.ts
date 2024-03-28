@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import isOpenModalWindowReducer from "./chosen-сomponents/is-open-modal-window";
+import modalWindowSliceReducer from "./chosen-сomponents/is-open-modal-window";
+import chatModalSliceReducer from "./chat-modal-slice/chat-modal-slice";
 
 export const store = configureStore({
   reducer: {
-    modalWindow: isOpenModalWindowReducer,
+    modalWindow: modalWindowSliceReducer,
+    ChatModal: chatModalSliceReducer,
   },
 });
 

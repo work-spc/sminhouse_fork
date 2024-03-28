@@ -6,6 +6,8 @@ import chat_questions from "../../icons/chat-and-call/chat-questions.svg";
 import cross from "../../icons/chat-and-call/cross.svg";
 import "./style.css";
 import { CallButton } from "../../components/call-button/call-button";
+import { openChat } from "../../state/chat-modal-slice/chat-modal-slice";
+import { useDispatch } from "react-redux";
 
 export const ChatAndCall: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +15,11 @@ export const ChatAndCall: React.FC = () => {
   const handleClick = () => {
     setIsVisible(!isVisible);
   };
-
+  const dispatch = useDispatch();
+  const handleOpenChat = () => {
+    dispatch(openChat());
+    document.body.classList.remove("overflow-hidden"); // Удаление класса для включения прокрутки
+  };
   return (
     <div className="fixed z-[999] bottom-16 right-8 md:bottom-24 md:right-14 flex flex-col items-center  ">
       <AnimatePresence>
@@ -27,7 +33,10 @@ export const ChatAndCall: React.FC = () => {
             className="mb-[2px]"
           >
             <CallButton></CallButton>
-            <div className="button-ChatAndCall md:h-16 md:w-16  flex p-[17px] md:p-[19px] cursor-pointer rounded-full bg-white border-[1.5px] border-accent_background ">
+            <div
+              onClick={handleOpenChat}
+              className="button-ChatAndCall md:h-16 md:w-16  flex p-[17px] md:p-[19px] cursor-pointer rounded-full bg-white border-[1.5px] border-accent_background "
+            >
               <img className="w-5 md:w-6" src={chat_questions} alt={"чат"} />
             </div>
           </motion.div>
