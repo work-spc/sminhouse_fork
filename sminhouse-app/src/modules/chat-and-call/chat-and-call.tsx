@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import chat from "../../icons/chat-and-call/chat.svg";
 import chat_questions from "../../icons/chat-and-call/chat-questions.svg";
-import phone_call from "../../icons/chat-and-call/phone-call.svg";
+
 import cross from "../../icons/chat-and-call/cross.svg";
 import "./style.css";
+import { CallButton } from "../../components/call-button/call-button";
 
 export const ChatAndCall: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,9 +26,7 @@ export const ChatAndCall: React.FC = () => {
             transition={{ duration: 0.2 }}
             className="mb-[2px]"
           >
-            <div className="button-ChatAndCall md:h-16 md:w-16  flex p-[17px] md:p-[19px] cursor-pointer mb-4 bg-white rounded-full border-[1.5px] border-accent_background ">
-              <img className="w-5 md:w-6" src={phone_call} alt={"звоток"} />
-            </div>
+            <CallButton></CallButton>
             <a href="tel:+7-917-435-8984">917-435-8984</a>
             <div className="button-ChatAndCall md:h-16 md:w-16  flex p-[17px] md:p-[19px] cursor-pointer rounded-full bg-white border-[1.5px] border-accent_background ">
               <img className="w-5 md:w-6" src={chat_questions} alt={"чат"} />
