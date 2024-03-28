@@ -27,7 +27,6 @@ export const ChatAndCall: React.FC = () => {
             className="mb-[2px]"
           >
             <CallButton></CallButton>
-            <a href="tel:+7-917-435-8984">917-435-8984</a>
             <div className="button-ChatAndCall md:h-16 md:w-16  flex p-[17px] md:p-[19px] cursor-pointer rounded-full bg-white border-[1.5px] border-accent_background ">
               <img className="w-5 md:w-6" src={chat_questions} alt={"чат"} />
             </div>
