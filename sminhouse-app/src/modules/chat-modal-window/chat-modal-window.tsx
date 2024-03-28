@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 import cross from "../../icons/chat-and-call/cross.svg";
-import button_close from "../../icons/modal-window/button-close.svg";
+
 import InputBestSolution from "../../components/best-solution-input/best-solution-input";
 import { closeChat } from "../../state/chat-modal-slice/chat-modal-slice";
 
