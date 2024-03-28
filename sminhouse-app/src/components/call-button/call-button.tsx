@@ -3,8 +3,8 @@ import phone_call from "../../icons/chat-and-call/phone-call.svg";
 
 const phoneNumber = "+7-917-435-8984";
 
-export const CallButton = () => {
-  const [showPhoneNumber, setShowPhoneNumber] = useState(false);
+export const CallButton: React.FC = () => {
+  const [showPhoneNumber, setShowPhoneNumber] = useState<boolean>(false);
 
   const handleCall = () => {
     if (isMobileDevice()) {
@@ -18,7 +18,9 @@ export const CallButton = () => {
     return window.matchMedia("(max-width: 768px)").matches;
   };
 
-  const handlePhoneNumberClick = (event) => {
+  const handlePhoneNumberClick = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     event.stopPropagation();
   };
 
