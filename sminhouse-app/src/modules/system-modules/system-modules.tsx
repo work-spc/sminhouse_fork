@@ -1,6 +1,10 @@
 import "./style.css";
 
-import first from "../../icons/system-modules/slide-first.png";
+import applications from "../../icons/system-modules/slides/applications.png";
+import chat from "../../icons/system-modules/slides/chat.png";
+import jkh from "../../icons/system-modules/slides/JKH.png";
+import notifications from "../../icons/system-modules/slides/notifications.png";
+import skud from "../../icons/system-modules/slides/SKUF.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -52,14 +56,20 @@ export const SystemModules: React.FC = () => {
           className="w-full z-10 bg-gray_background  row rounded-2xl hidden md:block"
         >
           <SwiperSlide className="flex items-center justify-center">
-            <img src={first} alt="" />
+            <img src={applications} alt="" />
           </SwiperSlide>
 
           <SwiperSlide className="flex items-center justify-center">
-            <img src={first} alt="" />
+            <img src={chat} alt="" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center">
-            <img src={first} alt="" />
+            <img src={jkh} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
+            <img src={notifications} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
+            <img src={skud} alt="" />
           </SwiperSlide>
         </Swiper>
         <Swiper
@@ -71,14 +81,20 @@ export const SystemModules: React.FC = () => {
           className="w-full z-10 bg-gray_background  row rounded-2xl block md:hidden"
         >
           <SwiperSlide className="flex items-center justify-center">
-            <img src={first} alt="" />
+            <img src={applications} alt="" />
           </SwiperSlide>
 
           <SwiperSlide className="flex items-center justify-center">
-            <img src={first} alt="" />
+            <img src={chat} alt="" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center">
-            <img src={first} alt="" />
+            <img src={jkh} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
+            <img src={notifications} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className="flex items-center justify-center">
+            <img src={skud} alt="" />
           </SwiperSlide>
         </Swiper>
       </div>
