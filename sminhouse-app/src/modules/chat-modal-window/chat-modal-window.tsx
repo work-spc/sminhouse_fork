@@ -17,10 +17,13 @@ export const ChatModalWindow = () => {
     dispatch(closeChat());
   };
 
-  // Добавляем класс overflow-hidden к body, когда чат открыт
+  // Добавляем класс overflow-hidden к body только на мобильных устройствах
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add("overflow-hidden");
+      if (window.innerWidth < 768) {
+        // Проверка на мобильное устройство по ширине экрана
+        document.body.classList.add("overflow-hidden");
+      }
     } else {
       document.body.classList.remove("overflow-hidden");
     }
