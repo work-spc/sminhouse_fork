@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isOpenChat: true,
+  isOpenChat: false,
 };
 
 const ChatModalWindowSlice = createSlice({
