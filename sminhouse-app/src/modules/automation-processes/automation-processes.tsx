@@ -1,23 +1,58 @@
-import { ListWithHeader } from "../../components/list-with-header/list-with-header";
+import { MListWithHeader } from "../../components/list-with-header/list-with-header";
 import logo from "../../icons/automation-processes/logo.svg";
+import { motion } from "framer-motion";
 import "./style.css";
+
+const featureAnimation = {
+  hidden: {
+    y: 100,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+    duration: 0.5, // Увеличиваем продолжительность анимации
+  }),
+};
 
 export const AutomationProcesses: React.FC = () => {
   return (
-    <div className="mb-20 lg:mb-40">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+      className="mb-20 lg:mb-40"
+    >
       <div className="lg:text-center mb-6 lg:mb-9 lg:text-5xl text-3xl">
-        <h2 className="font-bold mb-4 lg:mb-6">Автоматизация процессов</h2>
-        <p className="text-lg lg:text-xl text-light_dark_font lg:w-2/3 lg:m-auto">
+        <motion.h2
+          custom={1}
+          variants={featureAnimation}
+          className="font-bold mb-4 lg:mb-6"
+        >
+          Автоматизация процессов
+        </motion.h2>
+        <motion.p
+          custom={2}
+          variants={featureAnimation}
+          className="text-lg lg:text-xl text-light_dark_font lg:w-2/3 lg:m-auto"
+        >
           SminHOUSE объединяет различные сервисы в одну инфраструктуру, упрощая
           процессы от передачи показаний счетчиков до управления документами –
           все доступно в один клик.
-        </p>
+        </motion.p>
       </div>
       <div className="flex w-full flex-wrap lg:flex-nowrap gap-9">
-        {/* <div className="bg-gray-500 h-36 w-1/2"></div> */}
         <div className="lg:w-3/5 flex flex-wrap gap-y-4 lg:gap-y-9 ">
-          <div className="w-full">
-            <ListWithHeader
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+            className="w-full"
+          >
+            <MListWithHeader
+              custom={3}
+              variants={featureAnimation}
               title="Широкие возможности"
               items={[
                 "Видеонаблюдение",
@@ -26,25 +61,42 @@ export const AutomationProcesses: React.FC = () => {
                 "Прием заявок от жильцов и многое другое",
               ]}
             />
-          </div>
-          <div className="flex flex-wrap lg:flex-nowrap gap-y-4 ">
-            <div className="border w-full lg:w-2/5 p-6 lg:p-8 grow rounded-2xl border-gray_border bg-white lg:mr-9">
+          </motion.div>
+          <motion.div
+            // initial="hidden"
+            // whileInView="visible"
+            // viewport={{ amount: 0.2, once: true }}
+            className="flex flex-wrap lg:flex-nowrap gap-y-4 "
+          >
+            <motion.div
+              custom={3.5}
+              variants={featureAnimation}
+              className="border w-full lg:w-2/5 p-6 lg:p-8 grow rounded-2xl border-gray_border bg-white lg:mr-9"
+            >
               <p className="font-bold text-2xl mb-4">Удобный доступ</p>
               <p className="text-light_dark_font text-sm lg:text-lg ">
                 Вы можете пользоваться полным функционалом как с компьютера так
                 и с мобильного приложения
               </p>
-            </div>
-            <div className="border w-full lg:w-3/5 p-6 lg:p-8 grow rounded-2xl border-gray_border bg-white">
+            </motion.div>
+            <motion.div
+              custom={3.8}
+              variants={featureAnimation}
+              className="border w-full lg:w-3/5 p-6 lg:p-8 grow rounded-2xl border-gray_border bg-white"
+            >
               <p className="font-bold text-2xl mb-4">Система под ключ</p>
               <p className="text-light_dark_font text-sm lg:text-lg ">
                 Мы самоcтоятельно поставляем, устанавливаем и настраиваем все
                 необходимое оборудование. Полная поддержка по работе системы
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
-        <div className="rounded-2xl pt-48 lg:p-6 w-full lg:w-2/5 background-container flex flex-col justify-end">
+        <motion.div
+          custom={3}
+          variants={featureAnimation}
+          className="rounded-2xl pt-48 lg:p-6 w-full lg:w-2/5 background-container flex flex-col justify-end"
+        >
           <div
             style={{
               borderRadius: "14px",
@@ -71,8 +123,8 @@ export const AutomationProcesses: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };

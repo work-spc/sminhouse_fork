@@ -37,7 +37,7 @@ export const ChatModalWindow = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed w-screen h-[80vh] md:h-auto md:w-[375px] bottom-0 md:bottom-20 md:right-10 z-[1000] shadow-md rounded-2xl border-1 border-gray_border"
+          className="fixed w-screen h-[89vh] md:h-auto md:w-[375px] bottom-0 md:bottom-20 md:right-10 z-[1000] shadow-md rounded-2xl border-1 border-gray_border"
         >
           <div className="w-full bg-white rounded-t-2xl md:rounded-2xl border-[1px] border-gray_border flex flex-col h-full">
             <div className="flex justify-between items-center py-4 px-6 border-b-[1px] border-[#E2E8F0]">

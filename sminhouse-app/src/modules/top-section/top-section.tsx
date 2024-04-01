@@ -1,10 +1,26 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "../../components/button/button";
 import { SwiperMain } from "../../components/swiper/swiper";
 import "./style.css";
 import { useDispatch } from "react-redux";
 import { openModalWindow } from "../../state/chosen-сomponents/is-open-modal-window";
 import { DownloadButton } from "../../components/download-button/download-button";
+
+const textAnimation = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: custom * 0.2, // Увеличиваем задержку появления блока
+      duration: 0.5, // Увеличиваем продолжительность анимации
+    },
+  }),
+};
 
 export const TopSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -22,18 +38,31 @@ export const TopSection: React.FC = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="m-auto mb-20 md:mt-28 md:mb-40 pt-28 md:pt-0 flex md:flex-nowrap flex-wrap gap-x-9 ">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+      className="m-auto mb-20 md:mt-28 md:mb-40 pt-28 md:pt-0 flex md:flex-nowrap flex-wrap gap-x-9 "
+    >
       <div className="w-full flex flex-col z-10 md:w-3/5">
-        <h1 className="font-bold pt-6 md:text-6xl text-4xl mb-11 md:mb-0">
+        <motion.h1
+          custom={1}
+          variants={textAnimation}
+          className="font-bold pt-6 md:text-6xl text-4xl mb-11 md:mb-0"
+        >
           <span className="paragraph_h1">Универсальная система</span>
           <span className="paragraph2_h1">Универсальная</span>
           <br />
           <span className="paragraph2_h1">система</span> контроля недвижимости
           «под ключ»
-        </h1>
-        <h2 className="pt-6 hidden md:block  md:w-2/3 text-xl mb-11 text-light_dark_font">
+        </motion.h1>
+        <motion.h2
+          custom={2}
+          variants={textAnimation}
+          className="pt-6 hidden md:block  md:w-2/3 text-xl mb-11 text-light_dark_font"
+        >
           Управляйте недвижимостью удобно и эффективно вместе со Sminhouse
-        </h2>
+        </motion.h2>
         <div className="flex gap-x-6 mb-11 text-lg flex-wrap md:flex-nowrap">
           <div className="w-full md:w-auto mb-3 md:m-0 ">
             <DownloadButton></DownloadButton>
@@ -96,6 +125,6 @@ export const TopSection: React.FC = () => {
       ) : (
         <></>
       )}
-    </div>
+    </motion.div>
   );
 };

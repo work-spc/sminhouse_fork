@@ -15,9 +15,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <SmoothScroll>
         <App />
       </SmoothScroll>
-      <ModalWindow></ModalWindow>
-      <ChatAndCall></ChatAndCall>
-      <ChatModalWindow></ChatModalWindow>
+      <div>
+        <ModalWindow></ModalWindow>
+        <ChatAndCall></ChatAndCall>
+        <ChatModalWindow></ChatModalWindow>
+      </div>
     </Provider>
   </React.StrictMode>
 );

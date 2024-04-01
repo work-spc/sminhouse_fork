@@ -1,27 +1,84 @@
+import { motion } from "framer-motion";
 import phone from "../../icons/ready-made-solutions/phone.png";
 import background from "../../icons/ready-made-solutions/background.svg";
-import { ReadySolutionsItem } from "../../components/ready-solutions-item/ready-solutions-item";
+import { MReadySolutionsItem } from "../../components/ready-solutions-item/ready-solutions-item";
 import "./style.css";
 
+const animation = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+    duration: 0.5, // Увеличиваем продолжительность анимации
+  }),
+};
+const animationAbsolute = {
+  hidden: {
+    x: -1000,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: -430,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+    duration: 0.5, // Увеличиваем продолжительность анимации
+  }),
+};
+
+const animationRight = {
+  hidden: {
+    x: 100,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+    duration: 0.5, // Увеличиваем продолжительность анимации
+  }),
+};
+
 export const ReadyMadeSolutions: React.FC = () => {
+  const isMobile = window.innerWidth < 768;
   return (
-    <div className=" flex flex-wrap md:flex-nowrap justify-center items-center gap-x-16 gap-y-12 mb-20 md:mb-40">
-      <div className="relative w-full md:hidden background-ready">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+      className=" flex flex-wrap md:flex-nowrap justify-center items-center gap-x-16 gap-y-12 mb-20 md:mb-40"
+    >
+      <motion.div
+        custom={1}
+        variants={animation}
+        className="relative w-full md:hidden background-ready"
+      >
         <img className=" w-56 md:w-auto m-auto z-10" src={phone} alt="" />
-      </div>
-      <img
+      </motion.div>
+      <motion.img
+        custom={1}
+        variants={animation}
         className="filter-drop-shadow-solutions relative hidden md:block z-10 w-56 md:w-2/6 custom-shadow"
         src={phone}
         alt=""
       />
 
-      <img
+      <motion.img
+        custom={1}
+        variants={animationAbsolute}
         className="z-0 absolute hidden md:block  md:-translate-y-0 md:-translate-x-1/2 "
         src={background}
         alt=""
       />
 
-      <div className="w-full z-10">
+      <motion.div
+        custom={isMobile ? 2 : 1}
+        variants={isMobile ? animation : animationRight}
+        className="w-full z-10"
+      >
         <h2
           id="decisions"
           className="md:text-center md:text-5xl text-3xl font-bold mb-6 md:mb-9"
@@ -29,7 +86,7 @@ export const ReadyMadeSolutions: React.FC = () => {
           Готовые решения
         </h2>
         <div className="flex flex-wrap md:flex-nowrap gap-y-4 gap-x-9">
-          <ReadySolutionsItem
+          <MReadySolutionsItem
             title="Застройщикам и управляющим компаниям"
             className="24"
             items={[
@@ -41,7 +98,7 @@ export const ReadyMadeSolutions: React.FC = () => {
               "Ограничьте посещение служебных помещений",
             ]}
           />
-          <ReadySolutionsItem
+          <MReadySolutionsItem
             title="Агенствам недвижимости и собственникам"
             className="24"
             items={[
@@ -53,7 +110,7 @@ export const ReadyMadeSolutions: React.FC = () => {
             ]}
           />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
