@@ -53,7 +53,7 @@ const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
 
   const { scrollY } = useViewportScroll();
   const transform = useTransform(scrollY, [0, pageHeight], [0, -pageHeight]);
-  const physics = { damping: 10, mass: 0.2, stiffness: 55 };
+  const physics = { damping: 8, mass: 0.1, stiffness: 100 };
   const spring = useSpring(transform, physics);
 
   if (isMobile) {
