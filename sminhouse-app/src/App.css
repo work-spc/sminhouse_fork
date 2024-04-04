@@ -1,0 +1,25 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 8s linear infinite; /* Можете изменить продолжительность и тип анимации по вашему усмотрению */
+}
+
+@keyframes rotate-mobile {
+  from {
+    transform: rotate(0deg) scale(200%);
+  }
+  to {
+    transform: rotate(360deg) scale(200%);
+  }
+}
+
+.rotate-mobile {
+  animation: rotate-mobile 8s linear infinite;
+}

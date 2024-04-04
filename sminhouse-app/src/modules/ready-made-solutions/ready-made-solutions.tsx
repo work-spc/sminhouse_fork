@@ -69,7 +69,7 @@ export const ReadyMadeSolutions: React.FC = () => {
       <motion.img
         custom={1}
         variants={animationAbsolute}
-        className="z-0 absolute hidden md:block  md:-translate-y-0 md:-translate-x-1/2 "
+        className="z-0 absolute hidden md:block md:left-[2%] rotate"
         src={background}
         alt=""
       />

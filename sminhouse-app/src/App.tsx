@@ -1,17 +1,22 @@
 import { HomePage } from "./pages/home-page";
-import background from "./icons/navbar/bg.png";
-import background_phone from "./icons/navbar/bg-phone.png";
+import background from "./icons/navbar/bg.svg";
+import "./App.css";
 function App() {
   return (
-    <>
-      <img className="z-1 absolute hidden md:block" src={background} alt="" />
+    <div className="relative">
       <img
-        className="z-1 absolute w-full block md:hidden"
-        src={background_phone}
+        className="z-1 absolute right-[55%] top-[-11%] hidden md:block rotate"
+        src={background}
+        alt=""
+      />
+
+      <img
+        className="z-1 absolute w-full block top-[-2%] md:hidden rotate-mobile scale-[200%]"
+        src={background}
         alt=""
       />
       <HomePage></HomePage>
-    </>
+    </div>
   );
 }
 
