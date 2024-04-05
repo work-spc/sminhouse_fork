@@ -2,6 +2,8 @@ import "./style.css";
 
 import InputBestSolution from "../../components/best-solution-input/best-solution-input";
 
+// import background from "../../icons/best-solution/background.svg";
+
 export const BestSolution: React.FC = () => {
   return (
     <div
@@ -11,7 +13,7 @@ export const BestSolution: React.FC = () => {
         marginLeft: "-20px",
       }}
     >
-      <div className="background-img-best-solutions md:px-11 md:py-14 px-5 py-11">
+      <div className="relative background-img-best-solutions md:px-11 md:py-14 px-5 py-11">
         <h2 className="md:text-center text-white md:text-5xl text-3xl font-bold mb-2 md:mb-3">
           Подберем лучшее решение для вас
         </h2>
@@ -37,6 +39,7 @@ export const BestSolution: React.FC = () => {
               Подобрать решение
             </div>
           </button>
+          {/* <img src={background} className="absolute top-[50%] z-30" alt="" /> */}
         </div>
         <h3 className="text-center text-privacy_policy text-sm md:text-lg">
           Продолжив, вы соглашаетесь с<span> </span>

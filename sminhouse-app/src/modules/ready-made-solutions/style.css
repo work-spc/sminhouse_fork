@@ -1,7 +1,28 @@
 .background-ready {
+  position: relative; /* Чтобы псевдоэлемент можно было позиционировать относительно этого элемента */
+}
+
+.background-ready::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url(../../icons/ready-made-solutions/background.svg);
   background-size: cover;
   background-position: center;
+  animation: spin 20s linear infinite;
+  z-index: 1; /* Чтобы псевдоэлемент был "под" основным контентом */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .filter-drop-shadow-solutions {

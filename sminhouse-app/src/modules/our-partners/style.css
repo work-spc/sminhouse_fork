@@ -1,16 +1,32 @@
 .background-best-solutions {
   background-image: linear-gradient(to right, #39475c, #576e90);
 }
-.background-img-best-solutions {
-  background-image: url("../../icons/best-solution/background.png");
+/* .background-img-best-solutions {
+  background-image: url("../../icons/best-solution/background.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
-}
+} */
 
 .margin-partners {
   margin-top: -20px;
-  background-image: url("../../icons/our-partners/background.png");
+  /* background-image: url("../../icons/our-partners/background.svg");
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
+}
+
+.rotating-image-partners {
+  position: absolute; /* Позиционируем изображение абсолютно внутри контейнера */
+  width: 93.5%; /* Задаем ширину изображения */
+  transform-origin: center; /* Устанавливаем центр вращения */
+  animation: rotate 10s linear infinite; /* Запускаем анимацию вращения */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Начальный угол вращения */
+  }
+  to {
+    transform: rotate(360deg); /* Конечный угол вращения */
+  }
 }

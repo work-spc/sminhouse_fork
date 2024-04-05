@@ -17,6 +17,8 @@ import fourth_mobile from "../../icons/our-partners/mobile/fourth.png";
 import fifth_mobile from "../../icons/our-partners/mobile/fifth.png";
 import sixth_mobile from "../../icons/our-partners/mobile/sixth.png";
 
+import background from "../../icons/our-partners/background.svg";
+
 export const OurPartners: React.FC = () => {
   return (
     <div
@@ -77,7 +79,7 @@ export const OurPartners: React.FC = () => {
           ></OurPartnersItems>
         </div>
       </div>
-      <div className="flex bg-white justify-between flex-wrap md:flex-wrap px-5 pt-16 pb-11 md:px-11 md:pt-20 md:p-14 z-1 margin-partners text-left border rounded-b-2xl border-dark_background ">
+      <div className="flex relative overflow-hidden bg-white justify-between flex-wrap md:flex-wrap px-5 pt-16 pb-11 md:px-11 md:pt-20 md:p-14 z-1 margin-partners text-left border rounded-b-2xl border-dark_background ">
         <div className="w-full md:w-2/5">
           <h2 className="md:text-5xl text-3xl font-bold mb-3">
             Станьте нашим партнером
@@ -113,6 +115,11 @@ export const OurPartners: React.FC = () => {
             ООО “ИНТЕГРОСИСТЕМС”
           </p>
         </div>
+        <img
+          src={background}
+          className="absolute top-[-126%] w-[93%] rotating-image-partners"
+          alt=""
+        />
       </div>
     </div>
   );

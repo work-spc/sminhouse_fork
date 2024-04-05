@@ -49,15 +49,20 @@ export const ReadyMadeSolutions: React.FC = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.2, once: true }}
-      className=" flex flex-wrap md:flex-nowrap justify-center items-center gap-x-16 gap-y-12 mb-20 md:mb-40"
+      className=" flex relative flex-wrap md:flex-nowrap justify-center items-center gap-x-16 gap-y-12 mb-20 md:mb-40"
     >
       <motion.div
         custom={1}
         variants={animation}
         className="relative w-full md:hidden background-ready"
       >
-        <img className=" w-56 md:w-auto m-auto z-10" src={phone} alt="" />
+        <img
+          className="relative w-56 md:w-auto m-auto z-10"
+          src={phone}
+          alt=""
+        />
       </motion.div>
+      {/* wihvgi0jb */}
       <motion.img
         custom={1}
         variants={animation}
@@ -69,7 +74,7 @@ export const ReadyMadeSolutions: React.FC = () => {
       <motion.img
         custom={1}
         variants={animationAbsolute}
-        className="z-0 absolute hidden md:block md:left-[2%] rotate"
+        className="z-0 absolute hidden md:block md:left-[-45%] lg:left-[-30%] xl:left-[-20%] rotate"
         src={background}
         alt=""
       />
