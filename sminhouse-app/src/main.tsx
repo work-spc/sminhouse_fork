@@ -12,9 +12,9 @@ import { ChatModalWindow } from "./modules/chat-modal-window/chat-modal-window.t
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider store={store}>
-      {/* <SmoothScroll> */}
-      <App />
-      {/* </SmoothScroll> */}
+      <SmoothScroll>
+        <App />
+      </SmoothScroll>
       <div>
         <ModalWindow></ModalWindow>
         <ChatAndCall></ChatAndCall>
