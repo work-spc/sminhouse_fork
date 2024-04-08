@@ -11,7 +11,7 @@ export const WhiteInput: React.FC<UniversalInputProps> = ({
 }) => {
   if (type === "tel") {
     return (
-      <div className="relative h-14  md:h-auto w-full ">
+      <div className="z-[1] relative h-14  md:h-auto w-full ">
         <img
           className="absolute top-1/2 transform -translate-y-1/2 ml-5"
           src={ru}
@@ -30,7 +30,7 @@ export const WhiteInput: React.FC<UniversalInputProps> = ({
     );
   }
   return (
-    <div className="relative h-14 md:h-auto w-full ">
+    <div className="z-[1] relative h-14 md:h-auto w-full ">
       <input
         type={type}
         placeholder={placeholder}

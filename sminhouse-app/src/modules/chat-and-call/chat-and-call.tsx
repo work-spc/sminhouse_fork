@@ -1,28 +1,29 @@
-import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import chat from "../../icons/chat-and-call/chat.svg";
-import chat_questions from "../../icons/chat-and-call/chat-questions.svg";
+// import React, { useState } from "react";
+// import { AnimatePresence, motion } from "framer-motion";
+// import chat from "../../icons/chat-and-call/chat.svg";
+// import chat_questions from "../../icons/chat-and-call/chat-questions.svg";
 
-import cross from "../../icons/chat-and-call/cross.svg";
+// import cross from "../../icons/chat-and-call/cross.svg";
 import "./style.css";
 import { CallButton } from "../../components/call-button/call-button";
-import { openChat } from "../../state/chat-modal-slice/chat-modal-slice";
-import { useDispatch } from "react-redux";
+// import { openChat } from "../../state/chat-modal-slice/chat-modal-slice";
+// import { useDispatch } from "react-redux";
 
 export const ChatAndCall: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  const handleClick = () => {
-    setIsVisible(!isVisible);
-  };
-  const dispatch = useDispatch();
-  const handleOpenChat = () => {
-    dispatch(openChat());
-    document.body.classList.remove("overflow-hidden"); // Удаление класса для включения прокрутки
-  };
+  // const handleClick = () => {
+  //   setIsVisible(!isVisible);
+  // };
+  // const dispatch = useDispatch();
+  // const handleOpenChat = () => {
+  //   dispatch(openChat());
+  //   document.body.classList.remove("overflow-hidden"); // Удаление класса для включения прокрутки
+  // };
   return (
     <div className="fixed z-[999] bottom-16 right-8 md:bottom-24 md:right-14 flex flex-col items-center  ">
-      <AnimatePresence>
+      <CallButton></CallButton>
+      {/* <AnimatePresence>
         {isVisible && (
           <motion.div
             key="image"
@@ -41,8 +42,8 @@ export const ChatAndCall: React.FC = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
-      <button onClick={handleClick}>
+      </AnimatePresence> */}
+      {/* <button onClick={handleClick}>
         <AnimatePresence>
           <div className="h-16 w-16 flex align-middle content-center items-center justify-center">
             {isVisible ? (
@@ -70,7 +71,7 @@ export const ChatAndCall: React.FC = () => {
             )}
           </div>
         </AnimatePresence>
-      </button>
+      </button> */}
     </div>
   );
 };

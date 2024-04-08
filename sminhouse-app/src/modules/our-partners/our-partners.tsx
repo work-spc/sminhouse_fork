@@ -117,7 +117,7 @@ export const OurPartners: React.FC = () => {
         </div>
         <img
           src={background}
-          className="absolute top-[-126%] w-[93%] rotating-image-partners"
+          className="absolute z-0 top-[-126%] w-[93%] rotating-image-partners"
           alt=""
         />
       </div>
