@@ -40,7 +40,7 @@ export const Footer = () => {
           <div className="flex gap-7 justify-center md:justify-start mb-6 md:mb-0">
             {/* <img className="" src={dzen} alt="" /> */}
             {/* <img className="" src={youtube} alt="" /> */}
-            <a href="ссылка на vk">
+            <a href="https://vk.com/sminhouse">
               <img className="" src={vk} alt="" />
             </a>
             <a href="https://t.me/sminhouse">
