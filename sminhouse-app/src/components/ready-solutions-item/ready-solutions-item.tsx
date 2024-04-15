@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import "./style.css";
-import { Button } from "../button/button";
+// import { Button } from "../button/button";
 import { motion } from "framer-motion";
 
 interface ListWithHeaderProps {
@@ -14,7 +14,7 @@ export const ReadySolutionsItem: React.FC<ListWithHeaderProps> = forwardRef(
     return (
       <div
         ref={ref as React.RefObject<HTMLDivElement>}
-        className="border px-6 py-8 md:p-8 grow rounded-2xl border-gray_border bg-white flex flex-col justify-between"
+        className="border px-6 pt-6 pb-2 md:pt-8 md:px-8  md:pb-4  grow rounded-2xl border-gray_border bg-white flex flex-col justify-between"
       >
         <div>
           {className ? (
@@ -34,7 +34,7 @@ export const ReadySolutionsItem: React.FC<ListWithHeaderProps> = forwardRef(
             ))}
           </ul>
         </div>
-        {className ? (
+        {/* {className ? (
           <div className="mt-2 w-full">
             <Button children="Подробнее"></Button>
           </div>
@@ -42,7 +42,7 @@ export const ReadySolutionsItem: React.FC<ListWithHeaderProps> = forwardRef(
           <div className="mt-auto w-full">
             <Button children="Подробнее"></Button>
           </div>
-        )}
+        )} */}
       </div>
     );
   }

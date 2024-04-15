@@ -1,6 +1,6 @@
 import logo from "../../icons/footer/logo.svg";
-import dzen from "../../icons/footer/Yandex_Zen_logo_icon.svg";
-import youtube from "../../icons/footer/youtube.svg";
+// import dzen from "../../icons/footer/Yandex_Zen_logo_icon.svg";
+// import youtube from "../../icons/footer/youtube.svg";
 import vk from "../../icons/footer/VK.com-logo.svg";
 import telegram from "../../icons/footer/Telegram_2019_Logo 1.svg";
 
@@ -37,15 +37,19 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="md:w-1/5 text-light_dark_font font-medium flex flex-col justify-between">
-          <div className="flex gap-2 justify-evenly md:justify-between mb-6 md:mb-0">
-            <img className="" src={dzen} alt="" />
-            <img className="" src={youtube} alt="" />
-            <img className="" src={vk} alt="" />
-            <img className="" src={telegram} alt="" />
+          <div className="flex gap-7 justify-center md:justify-start mb-6 md:mb-0">
+            {/* <img className="" src={dzen} alt="" /> */}
+            {/* <img className="" src={youtube} alt="" /> */}
+            <a href="ссылка на vk">
+              <img className="" src={vk} alt="" />
+            </a>
+            <a href="https://t.me/sminhouse">
+              <img className="" src={telegram} alt="" />
+            </a>
           </div>
           <div className="md:h-1/2 text-center md:text-left flex flex-col justify-between">
             <p className="mb-4 md:mb-0">+7 961 582 02 02</p>
-            <p>shadow.sochi@gmail.com</p>
+            <p>info@sminhouse.ru</p>
           </div>
         </div>
       </div>

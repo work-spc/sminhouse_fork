@@ -25,9 +25,9 @@ export const SecuritySystems: React.FC = () => {
                 Беспроводная система безопасности
               </p>
 
-              <a className="text-accent_font text-lg md:text-xl" href="url">
+              {/* <a className="text-accent_font text-lg md:text-xl" href="url">
                 Подробнее
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="security-systems-border">
@@ -40,9 +40,9 @@ export const SecuritySystems: React.FC = () => {
                 Интеллектуальные системы видеонаблюдения
               </p>
 
-              <a className="text-accent_font text-lg md:text-xl" href="url">
+              {/* <a className="text-accent_font text-lg md:text-xl" href="url">
                 Подробнее
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="security-systems-border">
@@ -55,9 +55,9 @@ export const SecuritySystems: React.FC = () => {
                 Инновационные решения на рынке IP-видеонаблюдения
               </p>
 
-              <a className="text-accent_font text-lg md:text-xl" href="url">
+              {/* <a className="text-accent_font text-lg md:text-xl" href="url">
                 Подробнее
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

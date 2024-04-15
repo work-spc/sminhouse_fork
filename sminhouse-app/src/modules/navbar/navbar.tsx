@@ -239,7 +239,7 @@ export const Navbar: React.FC = () => {
                 </div>
                 <div className="md:h-1/2  text-center text-base flex flex-col justify-between">
                   <p className="mb-4 md:mb-0">+7 961 582 02 02</p>
-                  <p>shadow.sochi@gmail.com</p>
+                  <p>info@sminhouse.ru</p>
                 </div>
                 <Button
                   children="Получить консультацию"

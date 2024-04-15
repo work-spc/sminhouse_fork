@@ -2,6 +2,8 @@ import { MListWithHeader } from "../../components/list-with-header/list-with-hea
 import logo from "../../icons/automation-processes/logo.svg";
 import { motion } from "framer-motion";
 import "./style.css";
+import { openModalWindow } from "../../state/chosen-сomponents/is-open-modal-window";
+import { useDispatch } from "react-redux";
 
 const featureAnimation = {
   hidden: {
@@ -17,6 +19,7 @@ const featureAnimation = {
 };
 
 export const AutomationProcesses: React.FC = () => {
+  const dispatch = useDispatch();
   return (
     <motion.div
       initial="hidden"
@@ -117,7 +120,10 @@ export const AutomationProcesses: React.FC = () => {
                 </p>
               </div>
               <div className="flex align-center">
-                <button className="w-10">
+                <button
+                  onClick={() => dispatch(openModalWindow())}
+                  className="w-10"
+                >
                   <div className="w-10 h-10 button-automation-processes"></div>
                 </button>
               </div>

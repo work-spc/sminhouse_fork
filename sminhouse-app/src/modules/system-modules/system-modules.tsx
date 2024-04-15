@@ -18,8 +18,11 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { Button } from "../../components/button/button";
 import { useEffect, useState } from "react";
 import { SystemModulesInfo } from "../../components/system-modules-info/system-modules-info";
+import { useDispatch } from "react-redux";
+import { openModalWindow } from "../../state/chosen-сomponents/is-open-modal-window";
 
 export const SystemModules: React.FC = () => {
+  const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   useEffect(() => {
     const handleResize = () => {
@@ -41,7 +44,10 @@ export const SystemModules: React.FC = () => {
         </h2>
         <SystemModulesInfo></SystemModulesInfo>
         <div className="flex-grow min-h-6"></div>
-        <div className="hidden md:block">
+        <div
+          onClick={() => dispatch(openModalWindow())}
+          className="hidden md:block"
+        >
           <Button children="Получить консультацию" type="outline"></Button>
         </div>
       </div>
@@ -99,7 +105,10 @@ export const SystemModules: React.FC = () => {
         </Swiper>
       </div>
       {isMobile ? (
-        <div className="md:mt-6 w-full">
+        <div
+          onClick={() => dispatch(openModalWindow())}
+          className="md:mt-6 w-full"
+        >
           <Button children="Получить консультацию" type="outline"></Button>
         </div>
       ) : (

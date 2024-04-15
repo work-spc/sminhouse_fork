@@ -23,6 +23,7 @@ export function SwiperMain() {
         pagination={true}
         mousewheel={true}
         keyboard={true}
+        initialSlide={1}
         // loop={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="w-full overflow-hidden mb-8 md:mb-0 md:w-2/5 z-10 "

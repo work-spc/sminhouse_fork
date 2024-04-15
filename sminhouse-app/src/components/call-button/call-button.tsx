@@ -1,7 +1,7 @@
 import { useState } from "react";
 import phone_call from "../../icons/chat-and-call/phone-call.svg";
 
-const phoneNumber = "+7-917-435-8984";
+const phoneNumber = "8 (800) 302-08-70";
 
 export const CallButton: React.FC = () => {
   const [showPhoneNumber, setShowPhoneNumber] = useState<boolean>(false);
@@ -33,7 +33,7 @@ export const CallButton: React.FC = () => {
       {showPhoneNumber && (
         <div
           onClick={handlePhoneNumberClick}
-          className="absolute w-[160px] text-center top-[7px] right-0 translate-x-[-70px] bg-white border border-gray-300 p-3 rounded-xl shadow-md"
+          className="absolute w-[180px] text-center top-[7px] right-0 translate-x-[-70px] bg-white border border-gray-300 p-3 rounded-xl shadow-md"
         >
           <p style={{ userSelect: "text" }}>{phoneNumber}</p>
         </div>
