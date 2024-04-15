@@ -23,13 +23,13 @@ export function SwiperMain() {
         pagination={true}
         mousewheel={true}
         keyboard={true}
-        initialSlide={1}
+        // initialSlide={1}
         // loop={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="w-full overflow-hidden mb-8 md:mb-0 md:w-2/5 z-10 "
       >
         <SwiperSlide className="md:py-12 flex flex-col SwiperSlide-1 items-center justify-center">
-          <img className="hidden md:block px-16" src={first} alt="" />
+          <img className="hidden md:block px-16" src={second} alt="" />
           <div className="p-4 lock md:hidden flex-grow"></div>
           <img
             className="block md:hidden max-w-[226px]"
@@ -39,7 +39,7 @@ export function SwiperMain() {
         </SwiperSlide>
 
         <SwiperSlide className="md:py-12 flex flex-col SwiperSlide-2 items-center justify-center">
-          <img className="hidden md:block px-16" src={second} alt="" />
+          <img className="hidden md:block px-16" src={first} alt="" />
           <div className="p-4 lock md:hidden flex-grow"></div>
           <img
             className="block md:hidden max-w-[226px]"
